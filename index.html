@@ -1934,6 +1934,648 @@
     </p>
 </footer>
 
+        <!-- Tchat IA volledig compleet -->
+
+<title>Chat IA met Tracking en Spraakassistent</title>
+
+    <meta name="description" content="Spirituele chatbot voor onttovering, bescherming en aurareiniging door Frederick van ClairVoyanceMedium.com. Herwin vitaliteit en sereniteit snel voor een unieke prijs.">
+
+    <meta name="keywords" content="betoverd, nachtmerries, onttovering, bescherming, reiniging, energetische reiniging, helderziendheid, aura, energie, hulp, slaap, rituelen, spiritueel">
+
+    <style>
+        #chat-container {
+            position: fixed;
+            display: inline-block;
+            flex-direction: column;
+            z-index: 999999;
+            font-family: Arial, sans-serif;
+            transition: transform 0.2s;
+        }
+        #chat-bubble {
+            display: flex;
+            justify-content: flex-end;
+            cursor: move;
+        }
+        #chat-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, #FFB6C1, #FF69B4);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(255,105,180,0.7);
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            outline: none;
+        }
+        #chat-toggle:hover {
+            transform: scale(1.05);
+        }
+        #voice-toggle {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(145deg, #87CEEB, #5eb6d1);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(135,206,235,0.7);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            transition: transform 0.2s;
+            outline: none;
+        }
+        #voice-toggle:hover {
+            transform: scale(1.05);
+        }
+        #voice-toggle.disabled {
+            background: #808080;
+            box-shadow: 0 0 10px #808080;
+        }
+        #chat-box {
+            background: #111;
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            margin-top: 10px;
+            border: 2px solid #FF1493;
+            box-shadow: 0 0 10px #FF1493;
+            transition: all 0.3s ease;
+            max-height: 400px;
+        }
+        #chat-box.visible {
+            display: flex;
+        }
+        #chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            color: #fff;
+        }
+        #chat-messages p {
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .bot-message {
+            text-align: left;
+            color: #fff;
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            max-width: 80%;
+            border: 2px solid #FF69B4;
+            box-shadow: 0 0 8px #FF69B4;
+        }
+        .user-message {
+            text-align: right;
+            color: #ffd700;
+            margin-bottom: 0.8rem;
+            border: 2px solid #AED6F1;
+            box-shadow: 0 0 8px #AED6F1;
+            padding: 0.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            max-width: 80%;
+        }
+        #chat-form {
+            display: flex;
+            border-top: 1px solid #333;
+            align-items: center;
+            padding: 0.5rem;
+        }
+        #chat-input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+            color: #333;
+            border-radius: 5px 0 0 5px;
+        }
+        #chat-send {
+            background: #87CEEB;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0;
+            transition: background 0.2s;
+        }
+        #chat-send:hover {
+            background: #5eb6d1;
+        }
+        @media(max-width: 400px) {
+            #chat-container {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="chat-container">
+    <div id="chat-bubble">
+        <button id="chat-toggle" aria-expanded="false" aria-label="Chat openen">💬</button>
+        <button id="voice-toggle" aria-label="Spraakassistent activeren/deactiveren">🎤</button>
+    </div>
+    <div id="chat-box" role="region" aria-label="IA Chat">
+        <div id="chat-messages" aria-live="polite"></div>
+        <form id="chat-form" aria-label="Invoerformulier voor IA Chat">
+            <input type="text" id="chat-input" placeholder="Stel uw vraag..." aria-label="Typ hier uw bericht" autocomplete="off">
+            <button type="submit" id="chat-send" aria-label="Vraag verzenden">➤</button>
+        </form>
+    </div>
+</div>
+
+<script nonce="xai-ultra2025">
+// Tracking functie geïntegreerd met GA4
+function trackClick(label, category = 'Chat', value = null) {
+    console.log(`Tracking: Label=${label}, Category=${category}, Value=${value}`);
+    if (typeof gtag === 'function') {
+        gtag('event', label, { 'event_category': category, 'value': value });
+    }
+}
+
+// Vertalingen en berichten
+const translations = {
+        greeting: "Welkom in de wereld van ClairVoyanceMedium.com! Ik ben ClairVoyanceGPT, uw persoonlijke gids, hier om u te helpen vitaliteit, slankheid en sereniteit te herwinnen dankzij onze Victory afslankoplossingen en al onze spirituele oplossingen, om uw fysiek en mentaal comfort aanzienlijk te verbeteren!",
+        thanks: "Graag gedaan, ik ben hier om u te begeleiden!",
+        goodbye: "Tot snel om uw weg naar innerlijke en uiterlijke overwinning met Victory voort te zetten!",
+        notUnderstood: "Ik heb uw verzoek niet goed begrepen. Kunt u het herformuleren of uw vraag verduidelijken?",
+        notUnderstoodAfter: "Het lijkt erop dat we moeite hebben elkaar te begrijpen. Ontdek onze Victory Afslankcapsules of ons persoonlijke programma voor compleet welzijn. Spirituele diensten zoals email helderziendheid of analyse van uw liefdescompatibiliteit zijn ook beschikbaar om u te begeleiden!",
+        grave: "Uw situatie lijkt ernstig. Handel nu met onze Victory oplossingen om balans en energie te herwinnen. Ontdek onze programma's op de website!",
+        agree: "Perfect, hoe kan ik u verder helpen?"
+    };
+
+// Kennisbank met "Voordelen"
+const knowledgeBase = [
+    { question: "Vermoeidheid | Lusteloosheid | Traagheid | Uitputting | Zwakte | Slijtage", fullAnswer: "Deze overweldigende vermoeidheid is het werk van een duistere entiteit die uw energie verslindt; vertrouw de reiniging van uw aura toe aan Frederick van ClairVoyanceMedium.com om uw vitaliteit te herwinnen. Het kan een teken zijn van een duistere entiteit die dag na dag uw vitale energie aftapt. Frederick, expert in spirituele reiniging, gebruikt eeuwenoude rituelen om uw aura te reinigen en deze schadelijke krachten te verdrijven. Door snel te handelen kunt u een stralende vitaliteit en mentale helderheid herwinnen. Voordelen: herstelde dynamiek en heroverde helderheid." },
+    { question: "Nachtmerries | Visioenen | Nachten | Droom | Slapen | Dromen", fullAnswer: "Deze nachtmerries zijn geen eenvoudige dromen, ze zijn het resultaat van een kwaadaardige aanwezigheid; laat Frederick van ClairVoyanceMedium.com deze schaduwen verdrijven om u vredige nachten te bieden. Ze kunnen manifestaties zijn van een kwaadaardige aanwezigheid die uw geest binnendringt tijdens uw slaap. Frederick, met 25 jaar ervaring, beheerst krachtige rituelen om uw rustruimte te reinigen. U zult vredige nachten en herstellende slaap terugvinden. Voordelen: regenererende rust en nachtelijke sereniteit." },
+    { question: "Chaos | Turbulentie | Verwarring | Wanhoop | Wervelwind | Angst", fullAnswer: "De chaos om u heen komt van een verstorende vloek; laat Frederick van ClairVoyanceMedium.com de orde herstellen om uw mentale balans te herstellen. Verwarring en angst signaleren een verstorende vloek. Frederick, specialist in onttovering, verdrijft deze negatieve energieën. U zult mentale stabiliteit en innerlijke rust terugvinden die essentieel zijn. Voordelen: harmonie en innerlijke vrede." },
+    { question: "Zwaarte | Onderdrukking | Benauwdheid | Gewicht | Angstgevoel | Verplettering", fullAnswer: "Deze zwaarte die uw ziel onderdrukt is een duistere kracht; roep de hulp in van Frederick van ClairVoyanceMedium.com om bevrijd te worden en lichtheid te hervinden. Dit gevoel van benauwdheid is typisch voor een duistere kracht die uw ziel viseert. Frederick verbreekt deze greep met gerichte rituelen. U zult herwonnen lichtheid en vernieuwde energie voelen. Voordelen: bevrijding en herstelde vitaliteit." },
+    { question: "Vloek | Betovering | Bezwering | Charme | Magie | Hekserij", fullAnswer: "Uitputting, pech en nachtmerries zijn het gevolg van een vloek die u gevangen houdt; gebruik de interventie van Frederick van ClairVoyanceMedium.com om deze occulte banden te verbreken. Aanhoudende vermoeidheid en chronische pech zijn tekenen van een bezwering. Frederick blinkt uit in onttovering, met krachtige rituelen om u te bevrijden. U zult geluk en blijvend succes terugvinden. Voordelen: herwonnen welvaart en verzekerde triomf." },
+    { question: "Mislukking | Tegenslag | Val | Nederlaag | Ongeluk | Nederlaag", fullAnswer: "Herhaalde mislukkingen zijn te wijten aan een vloek die uw pad blokkeert; laat Frederick van ClairVoyanceMedium.com uw weg naar succes openen. Deze tegenslagen zijn geen toeval: een vloek blokkeert uw succes. Frederick heft deze onzichtbare obstakels op, waardoor uw traject wordt getransformeerd voor verzekerde vooruitgang. Voordelen: overwinning en verzekerde vooruitgang." },
+    { question: "Slaapeloosheid | Rusteloosheid | Waken | Vluchtend | Wakker | Bezorgdheid", fullAnswer: "Uw slapeloosheid wordt veroorzaakt door een entiteit die u van rust berooft; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw nachtelijke vrede te herstellen. Slapeloze nachten en rusteloosheid worden veroorzaakt door een entiteit die uw rust verstoort. Frederick verdrijft deze invloeden, waardoor u verzekerd bent van herstellende slaap. Voordelen: diepe slaap en dagelijkse energie." },
+    { question: "Pijn | Kwaal | Lijden | Brandend | Verdriet | Marteling", fullAnswer: "Onverklaarbare pijnen vertalen een occulte aanval op uw lichaam; laat Frederick van ClairVoyanceMedium.com dit onzichtbare kwaal verdrijven. Brandend gevoel en marteling signaleren een occulte aanval. Frederick, met spirituele genezingsrituelen, brengt onmiddellijke verlichting. Voordelen: onmiddellijke verlichting en herwonnen gemak." },
+    { question: "Isolatie | Eenzaamheid | Verlatenheid | Nood | Terugtrekking | Ijzig", fullAnswer: "De isolatie die u voelt komt van een vloek die u van anderen scheidt; vertrouw uw verzoening toe aan Frederick van ClairVoyanceMedium.com om warme banden te herstellen. Deze eenzaamheid is te wijten aan een vloek die u van anderen afsnijdt. Frederick verbreekt deze vloek, waardoor verbinding en sociaal welzijn terugkeren. Voordelen: toenadering en sociale bloei." },
+    { question: "Carrière | Werk | Ambitie | Stagnatie | Blokkade | Fiasco", fullAnswer: "Obstakels in uw carrière zijn het teken van een vloek die uw ambitie remt; laat Frederick van ClairVoyanceMedium.com uw potentieel bevrijden. Stagnatie en mislukkingen zijn te wijten aan een vloek. Frederick bevrijdt uw potentieel, wat leidt tot succes in uw carrière. Voordelen: triomf en professionele vervulling." },
+    { question: "Pech | Tegenslag | Toeval | Ongeluk | Onheil | Ramp", fullAnswer: "De pech die u ondergaat wordt veroorzaakt door een duistere vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om geluk aan te trekken. Tegenslagen en rampen zijn het werk van een vloek. Frederick reinigt uw aura, trekt geluk aan en opent nieuwe mogelijkheden. Voordelen: mogelijkheden en herstelde overvloed." },
+    { question: "Liefde | Passie | Romantiek | Gebroken | Liefdeloos | Affectief", fullAnswer: "Het gebrek aan liefde is te wijten aan een vloek die uw hart vergrendelt; laat Frederick van ClairVoyanceMedium.com uw liefdesleven nieuw leven inblazen. Gebroken harten of affectieve eenzaamheid worden veroorzaakt door een vloek. Frederick heft deze barrière op met zijn sentimentele magie, wat tederheid en harmonie brengt. Voordelen: genegenheid en emotioneel evenwicht." },
+    { question: "Familie | Thuis | Onenigheid | Spanning | Breuk | Conflict", fullAnswer: "Familie spanningen zijn het resultaat van een occulte schaduw; vertrouw Frederick van ClairVoyanceMedium.com de harmonisatie van uw relaties toe. Familieconflicten zijn te wijten aan een occulte schaduw. Frederick reinigt uw huis, waardoor eenheid en sereniteit terugkeren. Voordelen: eenheid en familierust." },
+    { question: "Kinderen | Kleintjes | Nageslacht | Zoon | Dochter | Kind", fullAnswer: "Het verdriet van uw kinderen weerspiegelt een duistere invloed; roep de hulp in van Frederick van ClairVoyanceMedium.com om hun aura te reinigen. Verdriet of zorgen van kinderen signaleren een duistere invloed. Frederick reinigt hun aura, waardoor vreugde terugkeert in het gezin. Voordelen: geluk en familiale bloei." },
+    { question: "Dieren | Gezellen | Beesten | Zenuwachtigheid | Verstoring | Instinct", fullAnswer: "De onrust van uw dieren duidt op een duistere aanwezigheid; laat Frederick van ClairVoyanceMedium.com de vrede herstellen. Ongebruikelijke zenuwachtigheid duidt op een duistere aanwezigheid. Frederick reinigt hun omgeving, waardoor rust terugkeert voor uw metgezellen. Voordelen: sereniteit en evenwicht voor uw metgezellen." },
+    { question: "Huis | Woonplaats | Thuis | Sfeer | Duisternis | Angst", fullAnswer: "De drukkende sfeer van uw huis is besmet met zwarte energieën; laat Frederick van ClairVoyanceMedium.com uw woonplaats reinigen. Angst en duisternis signaleren zwarte energieën. Frederick transformeert uw huis in een licht heiligdom. Voordelen: comfort en huislijk welzijn." },
+    { question: "Auto | Voertuig | Transport | Panne | Gevaar | Reis", fullAnswer: "De mysterieuze panne van uw voertuig wordt veroorzaakt door een vloek; vertrouw uw auto toe aan Frederick van ClairVoyanceMedium.com voor veiligheid. Verkeersincidenten zijn het gevolg van een vloek. Frederick reinigt uw voertuig, waardoor rust verzekerd is. Voordelen: gemoedsrust en wegbescherming." },
+    { question: "Aanwezigheid | Schaduw | Geest | Aura | Rilling | Indringing", fullAnswer: "Het gevoel gevolgd te worden is het resultaat van een kwaadaardige entiteit; laat Frederick van ClairVoyanceMedium.com u beschermen. Rillingen signaleren een kwaadaardige entiteit. Frederick creëert een krachtige bescherming, waardoor veiligheid verzekerd is. Voordelen: bescherming en mentale sereniteit." },
+    { question: "Angst | Vrees | Paniek | Horror | Terreur | Schrik", fullAnswer: "Uw angst wordt gegenereerd door een vernietigende vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om vrede te brengen. Paniek en schrik worden gegenereerd door een vloek. Frederick elimineert deze energieën, waardoor diepe rust terugkeert. Voordelen: verlichting en versterkt zelfvertrouwen." },
+    { question: "Prikkelbaarheid | Woede | Frustratie | Razernij | Ongeduld | Irritatie", fullAnswer: "Uw irritatie vertaalt de invloed van een occulte kracht; gebruik de expertise van Frederick van ClairVoyanceMedium.com om sereniteit te herstellen. Woede en frustratie weerspiegelen een occulte kracht. Frederick herstelt zachtheid, waardoor emotionele rust ontstaat. Voordelen: emotionele rust en harmonie." },
+    { question: "Concentratie | Helderheid | Aandacht | Verdriet | Wazig | Verspreiding", fullAnswer: "Uw verwarde geest is het slachtoffer van een verstorende vloek; laat Frederick van ClairVoyanceMedium.com uw gedachten centreren. Wazige geest is het doelwit van een vloek. Frederick elimineert deze interferenties, waardoor verhoogde concentratie verzekerd is. Voordelen: geoptimaliseerde aandacht en verhoogde efficiëntie." },
+    { question: "Geheugen | Vergetelheid | Herinnering | Amnesie | Wanorde | Gat", fullAnswer: "Geheugenverlies is het gevolg van een duistere bezwering; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw helderheid te herstellen. Geheugenverlies komt van een bezwering. Frederick herstelt uw geheugen, waardoor uw scherpe geest versterkt wordt. Voordelen: versterkte herinnering en mentale levendigheid." },
+    { question: "Afkomst | Erfgoed | Voorouders | Familie | Verleden | Last", fullAnswer: "De voorouderlijke vloek weegt op uw erfenis; vertrouw Frederick van ClairVoyanceMedium.com toe om u te bevrijden. Een generatielast kan op uw afkomst wegen. Frederick verbreekt deze cyclus, waardoor u zich opent voor familiale vrijheid. Voordelen: familiale bevrijding en persoonlijke vernieuwing." },
+    { question: "Beperking | Wurging | Verstikking | Druk | Duizeligheid | Gevangenschap", fullAnswer: "De onderdrukking die u ondergaat is een zwarte kracht; laat Frederick van ClairVoyanceMedium.com u bevrijden. Het gevoel van wurging is een zwarte kracht. Frederick bevrijdt u met krachtige rituelen, waardoor lichtheid ontstaat. Voordelen: vrijheid en herstelde kracht." },
+    { question: "Ellende | Verdriet | Hartzeer | Misère | Verwonding | Kwelling", fullAnswer: "Het lijden dat u ervaart komt van een occulte aanval; roep de hulp in van Frederick van ClairVoyanceMedium.com om u te genezen. Verdriet en hartzeer zijn een occulte aanval. Frederick reinigt uw wezen, waardoor snelle genezing ontstaat. Voordelen: snel herstel en blijvende verlichting." },
+    { question: "Ontkoppeling | Leegte | Desintegratie | Vervreemding | Niets | Afgrond", fullAnswer: "De innerlijke leegte is het resultaat van een isolerende vloek; laat Frederick van ClairVoyanceMedium.com u opnieuw verbinden met uw essentie. Deze ontkoppeling wordt veroorzaakt door een vloek. Frederick verbindt u opnieuw, waardoor innerlijke eenheid ontstaat. Voordelen: innerlijke samenhang en herwonnen evenwicht." },
+    { question: "Trilling | Energie | Halo | Uitputting | Demon | Duisternis", fullAnswer: "Uw doffe aura is vervuild door duisternis; vertrouw de reiniging toe aan Frederick van ClairVoyanceMedium.com om het licht te onthullen. Een verstoorde aura signaleert donkere vervuiling. Frederick verdrijft deze duisternis, waardoor positieve energie ontstaat. Voordelen: positieve vitaliteit en hernieuwde glans." },
+    { question: "Projecten | Ambities | Plannen | Stagnatie | Droom | Obstakel", fullAnswer: "Uw ambities worden belemmerd door een kwaadaardige vloek; laat Frederick van ClairVoyanceMedium.com uw potentieel bevrijden. Obstakels voor uw projecten zijn te wijten aan een vloek. Frederick elimineert deze blokkades, waardoor vruchtbare projecten geactiveerd worden. Voordelen: succes en creatieve impuls." },
+    { question: "Stress | Nervositeit | Uitputting | Overbelasting | Rusteloosheid | Kwelling", fullAnswer: "De stress die u overweldigt is de greep van een occulte kracht; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw spanningen te verlichten. Stress en nervositeit zijn een occulte kracht. Frederick kalmeert deze spanningen, waardoor sereniteit ontstaat. Voordelen: rust en mentale vrede." },
+    { question: "Lot | Pad | Duisternis | Richting | Onzekerheid | Noodlot", fullAnswer: "Uw lot is verhuld door een vloek die uw leven verduistert; laat Frederick van ClairVoyanceMedium.com uw pad verlichten. Een verhuld lot signaleert een vloek. Frederick verdrijft deze schaduwen, wat leidt naar een stralende vernieuwing. Voordelen: hoop en persoonlijke transformatie." },
+    { question: "Overgewicht | Kilos | Silhouet | Slankheid | Vet | Gewicht", fullAnswer: "Uw overgewicht remt uw zelfvertrouwen; vertrouw uw transformatie toe aan de Victory Afslankcapsules van ClairVoyanceMedium.com. Deze metabolische onbalans kan natuurlijk opgelost worden. De capsules op basis van mariene chitine en het Persoonlijke Afslankprogramma verfijnen uw silhouet. Verlies tot 12 kg in 2 maanden met natuurlijke ingrediënten. Voordelen: gebeeldhouwd silhouet en energieboost." },
+    { question: "Opgeblazen gevoel | Ongemak | Buik | Slankheid | Vochtretentie | Spijsvertering", fullAnswer: "Deze buikzwaarte belemmert uw welzijn; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com. Een opgeblazen gevoel signaleert een vertraagd metabolisme. De capsules en het Persoonlijke Afslankprogramma verminderen vochtretentie en vormen uw buik. Herwin lichtheid in 1 week. Voordelen: platte buik en herwonnen comfort." },
+    { question: "Plateau | Slankheid | Weerstand | Kilos | Stilstand | Silhouet", fullAnswer: "Uw afslankplateau blokkeert uw vooruitgang; vertrouw op de Victory Afslankcapsules van ClairVoyanceMedium.com. Deze stagnatie is vaak metabolisch. De capsules en het Persoonlijke Afslankprogramma ontgrendelen uw metabolisme. Verlies 8-12 kg in 2 maanden duurzaam. Voordelen: blijvende resultaten en herwonnen vertrouwen." },
+    { question: "Vreetbuien | Eetlust | Slankheid | Controle | Crises | Vet", fullAnswer: "Uw vreetbuien verstoren uw gewichtsverlies; vertrouw op de Victory Afslankcapsules van ClairVoyanceMedium.com. Oncontroleerbare eetlust weerspiegelt een hormonale onbalans. De capsules en het Persoonlijke Afslankprogramma reguleren uw metabolisme. Beheers uw gewicht vanaf vandaag. Voordelen: controle en verfijnd silhouet." },
+    { question: "Evenwicht | Lichaam | Verfijning | Vitaliteit | Harmonie | Hoeveelheid | Dosering", fullAnswer: "Uw lichaam verdient het om zijn natuurlijke balans te bereiken. Ontdek de Victory Capsules van ClairVoyanceMedium.com, geformuleerd met effectief gedoseerde mariene chitine voor duurzame verfijning. Met een dosering aangepast aan uw metabolisme en een optimale hoeveelheid, herwint u uw welzijn in 2 maanden terwijl u uw vitaliteit een boost geeft. Voor een persoonlijke aanpak, doe nu de BMI-test op onze website om de ideale dosering en het op maat gemaakte programma voor u te bepalen. Harmoniseer uw lichaam en herwin vertrouwen!" },
+    { question: "Contact | Neem contact op | Bel | Bericht | Email | Bereikbaarheid | Communicatie", fullAnswer: "Neem nu contact op met Frederick via email op het volgende adres: contact.clairvoyancemedium@gmail.com. Ons team zal u snel antwoorden om een emailconsultatie of een krachtig ritueel te organiseren, waardoor u directe reactiviteit en een onmiddellijke transformatie gegarandeerd krijgt die aan uw behoeften is aangepast. Voordelen: reactiviteit en onmiddellijke transformatie." },
+    { question: "Gewicht | Slankheid | Lichaam | Kilos | Transformatie | Buik", fullAnswer: "Uw overtollige kilo's doven uw silhouet; transformeer uzelf met de Victory Afslankcapsules van ClairVoyanceMedium.com. Dit overgewicht weerspiegelt een vertraagd metabolisme. De capsules en het Persoonlijke Afslankprogramma vormen uw lichaam. Verlies tot 12 kg in 2 maanden. Voordelen: verfijnd lichaam en vertrouwen." },
+    { question: "Vochtretentie | Slankheid | Zwelling | Zwaarte | Metabolisme | Spijsvertering", fullAnswer: "Uw spijsverteringsongemak remt uw welzijn; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com. Een opgeblazen gevoel signaleert een metabolische onbalans. De capsules en het Persoonlijke Afslankprogramma kalmeren uw spijsvertering. Herwin lichtheid in 7 dagen. Voordelen: vlotte spijsvertering en verfijnd silhouet." },
+    { question: "Relaties | Banden | Vriendschap | Conflict | Afstand | Breuk", fullAnswer: "Verbroken relaties zijn het resultaat van een vernietigende vloek; laat Frederick van ClairVoyanceMedium.com uw verbindingen herstellen. Conflicten met uw dierbaren zijn het gevolg van een vloek. Frederick reinigt deze banden, waardoor verzoening ontstaat. Voordelen: toenadering en sociale eenheid." },
+    { question: "Financiën | Geld | Rijkdom | Armoede | Stroom | Schuld", fullAnswer: "Financiële moeilijkheden komen van een vloek die overvloed blokkeert; vertrouw Frederick van ClairVoyanceMedium.com de missie toe om rijkdom te herstellen. Schulden worden veroorzaakt door een vloek. Frederick heft deze obstakels op, waardoor welvaart ontstaat. Voordelen: overvloed en economisch evenwicht." },
+    { question: "Toekomst | Hoop | Vooruitzicht | Onzekerheid | Ramp | Bedreiging", fullAnswer: "Uw toekomst wordt bedreigd door een duistere vloek; laat Frederick van ClairVoyanceMedium.com uw pad verlichten. Onzekerheid over de toekomst is te wijten aan een vloek. Frederick verdrijft deze schaduwen, wat leidt naar een veelbelovende toekomst. Voordelen: vertrouwen en vernieuwde horizonnen." },
+    { question: "Spieren | Pijn | Stijfheid | Vermoeidheid | Kramp | Uitputting", fullAnswer: "Spierpijn getuigt van een vloek die uw kracht verzwakt; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw energie te herstellen. Pijn en stijfheid zijn een vloek. Frederick herstelt uw kracht, waardoor soepelheid ontstaat. Voordelen: flexibiliteit en herstelde energie." },
+    { question: "Hallucinaties | Verschijningen | Illusies | Duister | Waan | Spook", fullAnswer: "Visioenen en hallucinaties zijn het gevolg van occulte aanvallen; roep de hulp in van Frederick van ClairVoyanceMedium.com om deze illusies te verdrijven. Verschijningen zijn occulte aanvallen. Frederick reinigt uw geest, waardoor helderheid ontstaat. Voordelen: duidelijkheid en perceptuele rust." },
+    { question: "Aanval | Agressie | Assault | Vijandigheid | Invasie | Vloek", fullAnswer: "De agressie die u voelt komt van een vijandige kracht; roep de hulp in van Frederick van ClairVoyanceMedium.com om deze bedreigingen te neutraliseren. Energetische bedreigingen zijn een vijandige kracht. Frederick verzekert uw veiligheid. Voordelen: bescherming en innerlijke rust." },
+    { question: "Nood | Crisis | Onmiddelijkheid | Haast | Alarm | Gevaar", fullAnswer: "De urgentie tegenover dreigende schaduwen vereist actie; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw lot te beveiligen. Crisis en gevaar vereisen een snelle interventie. Frederick stopt deze bedreigingen, waardoor sereniteit verzekerd is. Voordelen: snelle interventie en gegarandeerde veiligheid." },
+    { question: "Ondersteuning | Begeleiding | Hulp | Redding | Zorg | Bescherming", fullAnswer: "De ondersteuning die u nodig heeft wordt verzekerd door Frederick van ClairVoyanceMedium.com; geniet van constante bescherming. Tegenover schaduwen biedt Frederick deskundige begeleiding, waardoor uw veiligheid behouden blijft. Voordelen: bescherming en persoonlijke opvolging." },
+    { question: "Reputatie | Geloofwaardigheid | Faam | Betrouwbaarheid | Prestige | Vertrouwen", fullAnswer: "Met 25 jaar succes is Frederick van ClairVoyanceMedium.com een bolwerk tegen duisternis; vertrouw op hem om uw leven te transformeren. Zijn ervaring maakt hem een veilige keuze, wat tastbare resultaten garandeert. Voordelen: bewezen knowhow en concrete resultaten." },
+    { question: "Analyse | Diagnose | Sessie | Evaluatie | Ritueel | Consult", fullAnswer: "Een consult bij Frederick van ClairVoyanceMedium.com reinigt uw aura; engageer u voor een transformatie. Deze reiniging bereidt uw redding voor, waardoor onmiddellijke helderheid en vernieuwing ontstaan. Voordelen: helderheid en onmiddellijke revitalisatie." },
+    { question: "Methoden | Technieken | Praktijken | Geheimen | Kennis | Riten", fullAnswer: "De rituelen van Frederick van ClairVoyanceMedium.com reinigen uw aura in 4 dagen; kies voor deze bewezen methode. Deze eeuwenoude rituelen verdrijven schaduwen, waardoor snelle transformatie gegarandeerd is. Voordelen: efficiëntie en snelle revitalisatie." },
+    { question: "Vertrouwelijkheid | Geheim | Discretie | Veiligheid | Privacy | Bewaking", fullAnswer: "De discretie van Frederick van ClairVoyanceMedium.com beschermt uw ziel; vertrouw hem uw geheimen toe voor genezing. Frederick garandeert totale privacy, waardoor vertrouwen terugkeert. Voordelen: sereniteit en verzekerd vertrouwen." },
+    { question: "Tarief | Kosten | Prijsstelling | kost | Verzending | Prijs | Waarde | Betaling", fullAnswer: "Een voordelig tarief wordt aangeboden om uw aura te reinigen of uw silhouet te verfijnen; investeer voor een radicale verandering. Vanaf €6,00 voor een email helderziendheid of €19,00 voor de Victory Afslankcapsules, biedt deze investering een onschatbare waarde. Wereldwijde verzending is momenteel gratis zonder minimale aankoop. Voordelen: gecontroleerde prijs en waardevolle waarde." },
+    { question: "Succes | Overwinning | Triomf | Welvaart | Vervulling | Winst", fullAnswer: "Frederick van ClairVoyanceMedium.com transformeert levens naar succes; engageer u voor een verzekerde overwinning. Frederick leidt naar succes in projecten of carrière, waardoor welvaart verzekerd is. Voordelen: overvloed en persoonlijke vervulling." },
+    { question: "Horror | Rilling | Duister | Zwart | Nacht | Angst", fullAnswer: "Nachtelijke verschrikkingen zijn het gevolg van een kwaadaardige vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om veiligheid te brengen. Horror en rillingen zijn een vloek die uw nachten verstoort. Frederick reinigt uw omgeving, waardoor vrede verzekerd is. Voordelen: rust en gegarandeerde sereniteit." },
+    { question: "Wanhoop | Verdriet | Rouw | Melancholie | Verlies | Hartzeer", fullAnswer: "Wanhoop wordt veroorzaakt door een occulte schaduw; laat Frederick van ClairVoyanceMedium.com het licht doen herleven. Diep verdriet is een schaduw die uw licht uitdooft. Frederick brengt hoop terug, waardoor emotionele vernieuwing ontstaat. Voordelen: hoop en affectieve vernieuwing." },
+    { question: "Koude | Rilling | Diep | Koud | Ijzig | Paniek", fullAnswer: "Angst gemarkeerd door een ijzige koude is een verlammende vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw warmte te herstellen. Rillingen en koude zijn een vloek. Frederick herstelt innerlijke warmte, waardoor troost ontstaat. Voordelen: ontspanning en herwonnen vertrouwen." },
+    { question: "Ja | Akkoord | ok | Ik keur goed | Bevestigd | Abon | Natuurlijk", fullAnswer: "🙂" },
+    { question: "Zwart | Sluier | Duister | Eeuwig | Schemering | Afgrond", fullAnswer: "De duisternis die u omhult is een kwaadaardige vloek; laat Frederick van ClairVoyanceMedium.com het licht terugbrengen. Duisternis is een vloek die uw lot verduistert. Frederick reinigt uw pad, waardoor verlichting ontstaat. Voordelen: helderheid en gegarandeerde revitalisatie." },
+    { question: "Verlatenheid | Teruggetrokken | Totaal | Isolatie | Verlaten | Niets", fullAnswer: "Eenzaamheid is een vloek van de duisternis; roep de hulp in van Frederick van ClairVoyanceMedium.com om opnieuw verbinding te maken. Verlatenheid is een vloek. Frederick herstelt essentiële banden, waardoor sociale harmonie ontstaat. Voordelen: toenadering en sociale eenheid." },
+    { question: "Verraad | Trouweloosheid | Ontrouw | Loyaliteit | Teleurstelling | Dubbelhartigheid", fullAnswer: "Verraad is het resultaat van een vernietigende vloek; laat Frederick van ClairVoyanceMedium.com loyaliteit herstellen. Teleurstelling is een vloek die uw relaties verzwakt. Frederick beschermt uw banden, waardoor vertrouwen ontstaat. Voordelen: zekerheid en herstelde trouw." },
+    { question: "Gefluister | Fluistering | Stem | Echo | Geluiden | Adem", fullAnswer: "Verontrustende gefluister zijn het resultaat van een subtiele vloek; laat Frederick van ClairVoyanceMedium.com stilte brengen. Spookgeluiden zijn een verstorende vloek. Frederick reinigt de ruimte, waardoor innerlijke vrede ontstaat. Voordelen: verlichting en geoptimaliseerde aandacht." },
+    { question: "Grauw | Duister | Somber | Zwartheid | Luguber | Sinister", fullAnswer: "De omringende somberheid is een zware vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw licht te onthullen. Grauwheid is een vloek die uw leven verduistert. Frederick herstelt uw glans, waardoor vernieuwing ontstaat. Voordelen: revitalisatie en herwonnen glans." },
+    { question: "Scepticisme | Argwaan | Koud | Wantrouwen | Bevraging | Twijfel", fullAnswer: "Twijfels worden gezaaid door een duistere vloek; laat Frederick van ClairVoyanceMedium.com uw ideeën verduidelijken. Wantrouwen is een vloek die uw visie vertroebelt. Frederick verdrijft deze invloeden, waardoor zekerheid ontstaat. Voordelen: vertrouwen en mentale helderheid." },
+    { question: "Tot ziens | totziens | Tot snel| Dag | Ciao | Ik kom terug | Goede dag | Goede avond", fullAnswer: "Tot snel in het eeuwige licht! Frederick, die duizenden zielen heeft geholpen, omringt u met zijn constante waakzaamheid. U staat niet langer alleen tegenover schaduwen, want weet dat zijn kracht alle duisternis overstijgt." },
+    { question: "Onenigheid | Clash | Verdeeldheid | Ruzie | Breuk | Twist", fullAnswer: "Onenigheid wordt veroorzaakt door een vernietigende vloek; laat Frederick van ClairVoyanceMedium.com uw banden herenigen. Ruzies zijn een vloek. Frederick reinigt deze relaties, waardoor harmonie hersteld wordt. Voordelen: eenheid en sociale harmonie." },
+    { question: "Onrecht | Ongelijkheid | Vooroordeel | Partijdigheid | Fout | Nadeel", fullAnswer: "Onrecht is het resultaat van een bevooroordeelde vloek; laat Frederick van ClairVoyanceMedium.com billijkheid herstellen. Nadelen zijn een vloek. Frederick herstelt billijkheid, wat leidt naar een harmonieuze toekomst. Voordelen: rechtschapenheid en persoonlijke harmonie." },
+    { question: "Schemer | Hart | Innerlijk | Stil | Traan | Ellende", fullAnswer: "Diep verdriet is te wijten aan een occulte schaduw; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw hart te troosten. Tranen zijn een schaduw die uw hart belemmert. Frederick herstelt het licht, waardoor troost ontstaat. Voordelen: verlichting en affectieve vernieuwing." },
+    { question: "Kwelling | Beproeving | Catastrofe | Omwenteling | Crisis | Schok", fullAnswer: "Crisis wordt veroorzaakt door een occulte aanval; roep de hulp in van Frederick van ClairVoyanceMedium.com om orde te herstellen. Kwelling is een occulte aanval. Frederick biedt een onmiddellijke wedergeboorte, waardoor stabiliteit hersteld wordt. Voordelen: herstel en herwonnen evenwicht." },
+    { question: "Wie | Frederic | Frederick | Ervaring | Kennis | Onttoveraar", fullAnswer: "Frederick van ClairVoyanceMedium.com is een expert gevormd door 25 jaar ervaring; zijn beheersing van onzichtbare krachten leidt naar succes. Zijn geslepen vaardigheden transformeren carrières en aspiraties met diep inzicht. Voordelen: bewezen knowhow en duurzame transformatie." },
+    { question: "Dynamiek | Energie | Innerlijk | Kracht | Impuls | Vitaliteit", fullAnswer: "Het verzwakken van uw vitaliteit is het gevolg van een drainerende vloek; roep de hulp in van Frederick van ClairVoyanceMedium.com om uw kracht te doen herleven. Verlies van impuls is een vloek. Frederick wekt uw dynamiek op, waardoor duurzame kracht ontstaat. Voordelen: kracht en herwonnen energie." },
+    { question: "Vlam | Vurigheid | Levendig | Glans | Warmte | Passie", fullAnswer: "Flickerende passie is te wijten aan een verstikkende vloek; laat Frederick van ClairVoyanceMedium.com uw vlam doen herleven. Uitgedoofd innerlijk vuur is een vloek. Frederick verwarmt uw ziel, waardoor creatieve energie vrijkomt. Voordelen: inspiratie en creatieve vitaliteit." },
+    { question: "Helderziendheid | Email | Voorspelling | Lot | Openbaring | Begeleiding", fullAnswer: "Uw toekomst is verhuld door onzekere schaduwen; vertrouw op de email helderziendheid van Frederick op ClairVoyanceMedium.com om uw pad te verlichten. Twijfels over uw lot vinden duidelijke antwoorden. Frederick, met 25 jaar expertise, biedt u nauwkeurige voorspellingen per email. Vanaf €6,00 ontvangt u persoonlijke begeleiding. Voordelen: helderheid en vertrouwen in uw toekomst." },
+    { question: "Consult | Email | Visioen | Profetie | Toekomst | Advies", fullAnswer: "De onzekerheden van morgen maken u angstig; kies voor een emailconsult met Frederick van ClairVoyanceMedium.com voor krachtige openbaringen. Vragen over uw toekomst verdienen duidelijke antwoorden. Frederick begeleidt u met nauwkeurige visioenen verzonden per email. Een sessie vanaf €6,00 transformeert uw onzekerheid in zekerheid. Voordelen: helderheid en verlichte beslissingen." },
+    { question: "Orakel | Email | Waarzeggerij | Toekomst | Intuïtie | Verduidelijking", fullAnswer: "Uw pad is verduisterd door twijfel; roep de hulp in van de email helderziendheid van Frederick op ClairVoyanceMedium.com voor divinatorische antwoorden. Onzekerheid blokkeert uw keuzes. Frederick, meester in waarzeggerij, stuurt u intuïtieve voorspellingen per email. Vanaf €6,00 ontdekt u uw toekomst. Voordelen: versterkte intuïtie en herwonnen helderheid." },
+    { question: "Voorspelling | Email | Antwoord | Pad | Beslissing | Waarheid", fullAnswer: "Vragen over uw toekomst verlammen u; kies voor de email helderziendheid van Frederick op ClairVoyanceMedium.com voor onthulde waarheden. Besluiteloosheid remt uw impuls. Frederick biedt u snelle en nauwkeurige antwoorden per email. Vanaf €6,00 neemt u de juiste beslissingen. Voordelen: zekerheid en verlicht pad." },
+    { question: "Begeleiding | Email | Spiritueel | Lot | Advies | Licht", fullAnswer: "Uw ziel zoekt een duidelijke richting; vertrouw op de email helderziendheid van Frederick op ClairVoyanceMedium.com voor spirituele begeleiding. Spirituele twijfels verduisteren uw lot. Frederick stuurt u diep advies per email. Vanaf €6,00 vindt u het licht. Voordelen: innerlijke vrede en verzekerde richting." },
+    { question: "Slankheid | Evenwicht | Lichaam | Verfijning | Vitaliteit | Harmonie", fullAnswer: "Uw lichaam verlangt naar evenwicht; transformeer uzelf met de Victory Afslankcapsules van ClairVoyanceMedium.com. Een verstoord metabolisme remt uw welzijn. De capsules op basis van mariene chitine en het Persoonlijke Afslankprogramma harmoniseren uw lichaam. Verlies 8-12 kg in 2 maanden op natuurlijke wijze. Voordelen: vitaliteit en verfijnd silhouet." },
+    { question: "Silhouet | Slankheid | Vorm | Kilos | Esthetiek | Welzijn", fullAnswer: "Uw silhouet mist glans; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com om te stralen. Overtollige kilo's doven uw esthetiek. De capsules en het Persoonlijke Afslankprogramma vormen uw figuur. Verlies tot 12 kg in 2 maanden. Voordelen: herwonnen schoonheid en boost van zelfvertrouwen." },
+    { question: "Afslanken | Metabolisme | Verlies | Vet | Energie | Lichaam", fullAnswer: "Uw metabolisme vertraagt uw gewichtsverlies; vertrouw op de Victory Afslankcapsules van ClairVoyanceMedium.com. Aanhoudend vet remt uw energie. De capsules en het Persoonlijke Afslankprogramma stimuleren uw metabolisme. Verlies 8-12 kg in 2 maanden. Voordelen: herwonnen energie en gebeeldhouwd lichaam." },
+    { question: "Buik | Slankheid | Opgeblazen gevoel | Verfijning | Comfort | Gewicht", fullAnswer: "Uw opgeblazen buik belemmert uw comfort; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com om hem te verfijnen. Een opgeblazen gevoel weerspiegelt een spijsverteringsonbalans. De capsules en het Persoonlijke Afslankprogramma verminderen dit ongemak. Herwin een platte buik in 7 dagen. Voordelen: comfort en elegant silhouet." },
+    { question: "Helemaal niet | Nee", fullAnswer: "?" },
+    { question: "Slankheid | Eetlust | Regulatie | Kilos | Controle | Welzijn", fullAnswer: "Uw overmatige eetlust remt uw slankheid; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com. Vreetbuien signaleren een hormonale onbalans. De capsules en het Persoonlijke Afslankprogramma reguleren uw eetlust. Verlies tot 12 kg in 2 maanden. Voordelen: herwonnen controle en welzijn." },
+    { question: "Compatibiliteit | Liefde | Koppel | Harmonie | Relatie | Lot", fullAnswer: "Twijfels over uw relatie verduisteren uw hart; vertrouw Frederick van ClairVoyanceMedium.com toe voor een onthulde liefdescompatibiliteit. Liefdes spanningen signaleren een misalignatie. Frederick, expert in sentimentele magie, analyseert uw compatibiliteit. Herwin harmonie in 4 dagen. Voordelen: versterkte liefde en duurzame verbintenis." },
+    { question: "Sentimenteel | Magie | Hart | Passie | Terugkeer | Emotie", fullAnswer: "Uw gebroken hart verlangt naar passie; roep de hulp in van Frederick van ClairVoyanceMedium.com voor een terugkeer van de liefde. Sentimenteel verlies is een omkeerbare vloek. Frederick gebruikt sentimentele magie om de liefde te doen herleven. Herwin uw geliefde in 4 dagen. Voordelen: herleefde passie en affectief geluk." },
+    { question: "Bescherming | Schild | Kwaad | Energieën | Veiligheid | Geest", fullAnswer: "Negatieve energieën bedreigen uw geest; roep de hulp in van Frederick van ClairVoyanceMedium.com voor een beschermend schild. Donkere invloeden verstoren uw vrede. Frederick creëert een krachtige spirituele bescherming. Leef in veiligheid vanaf vandaag. Voordelen: sereniteit en verzekerde bescherming." },
+    { question: "Reiniging | Aura | Schoonmaak | Schaduw | Glans | Ziel", fullAnswer: "Uw aura is verduisterd door schaduwen; vertrouw de reiniging toe aan Frederick van ClairVoyanceMedium.com om uw glans te herwinnen. Een vervuilde aura drainert uw energie. Frederick gebruikt eeuwenoude rituelen om uw ziel te reinigen. Herwin uw licht in 4 dagen. Voordelen: spirituele glans en vitaliteit." },
+    { question: "Geluk | Fortuin | Kans | Succes | Welvaart | Lot", fullAnswer: "Pech blokkeert uw kansen; roep de hulp in van Frederick van ClairVoyanceMedium.com om fortuin aan te trekken. Een duistere vloek remt uw succes. Frederick reinigt uw pad, waardoor welvarende deuren opengaan. Grijp uw kans nu. Voordelen: overvloed en verzekerde triomf." },
+    { question: "Helderziendheid | Openbaring | Email | Mysterie | Waarheid | Intuïtie", fullAnswer: "De mysteries van uw toekomst ontsnappen u; kies voor de email helderziendheid van Frederick op ClairVoyanceMedium.com voor onthulde waarheden. Onzekerheden blokkeren uw intuïtie. Frederick stuurt u duidelijke openbaringen per email. Vanaf €6,00 verlicht u uw lot. Voordelen: waarheid en herwonnen zekerheid." },
+    { question: "Email | Voorspelling | Advies | Toekomst | Keuze | Helderheid", fullAnswer: "Uw toekomstige keuzes zijn vaag; vertrouw op de email helderziendheid van Frederick op ClairVoyanceMedium.com voor onmiddellijke helderheid. Besluiteloosheid remt uw projecten. Frederick biedt u nauwkeurig advies per email. Vanaf €6,00 gaat u vol vertrouwen vooruit. Voordelen: helderheid en verzekerde beslissingen." },
+    { question: "Slankheid | Detox | Lichaam | Eliminatie | Toxines | Lichtheid", fullAnswer: "Uw lichaam wordt verzwaard door toxines; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com voor een natuurlijke detox. Toxines remmen uw slankheid. De capsules en het Persoonlijke Afslankprogramma elimineren onzuiverheden. Herwin lichtheid in 7 dagen. Voordelen: gezuiverd lichaam en verfijnd silhouet." },
+    { question: "Slankheid | Energie | Verlies | Kilos | Dynamiek | Vorm", fullAnswer: "Uw overtollige kilo's draineren uw energie; transformeer uzelf met de Victory Afslankcapsules van ClairVoyanceMedium.com. Een traag metabolisme remt uw vorm. De capsules en het Persoonlijke Afslankprogramma stimuleren uw gewichtsverlies. Verlies 8-12 kg in 2 maanden. Voordelen: dynamiek en gebeeldhouwd lichaam." },
+    { question: "Slankheid | Vertrouwen | Silhouet | Gewicht | Glans | Schoonheid", fullAnswer: "Uw gebrek aan zelfvertrouwen komt van uw silhouet; vertrouw op de Victory Afslankcapsules van ClairVoyanceMedium.com. Kilo's doven uw glans. De capsules en het Persoonlijke Afslankprogramma verfijnen uw lichaam. Verlies tot 12 kg in 2 maanden. Voordelen: herwonnen schoonheid en zelfvertrouwen." },
+    { question: "Helderziendheid | Email | Liefde | Voorspelling | Hart | Relatie", fullAnswer: "Uw hart twijfelt aan de liefde; kies voor de email helderziendheid van Frederick op ClairVoyanceMedium.com voor duidelijke antwoorden. Liefdesonzekerheden verwarren uw geest. Frederick stuurt u nauwkeurige voorspellingen per email. Vanaf €6,00 verlicht u uw amoureuze toekomst. Voordelen: helderheid en harmonieuze liefde." },
+    { question: "Email | Begeleiding | Carrière | Toekomst | Succes | Advies", fullAnswer: "Uw carrière is onzeker; kies voor de email helderziendheid van Frederick op ClairVoyanceMedium.com voor nauwkeurige begeleiding. Twijfels remmen uw succes. Frederick biedt u strategisch advies per email. Vanaf €6,00 tekent u uw professionele pad. Voordelen: succes en verzekerd vertrouwen." },
+    { question: "Slankheid | Buik | Verfijning | Kilos | Comfort | Harmonie", fullAnswer: "Uw buik verzwaart uw welzijn; vertrouw op de Victory Afslankcapsules van ClairVoyanceMedium.com om hem te verfijnen. Buik kilo's verstoren uw harmonie. De capsules en het Persoonlijke Afslankprogramma vormen uw buik. Herwin comfort in 7 dagen. Voordelen: platte buik en welzijn." },
+    { question: "Slankheid | Gewicht | Calorie | Evenwicht | Lichaam | Verlies | Vitaliteit", fullAnswer: "Uw gewicht verstoort uw lichaamsbalans; kies voor de Victory Afslankcapsules van ClairVoyanceMedium.com voor een transformatie. Een traag metabolisme remt uw vitaliteit. De capsules en het Persoonlijke Afslankprogramma bevorderen gewichtsverlies. Verlies 8-12 kg in 2 maanden. Voordelen: evenwicht en herwonnen energie." },
+    { question: "Helderziendheid | Email | Financiën | Voorspelling | Rijkdom | Toekomst", fullAnswer: "Uw financiën zijn onzeker; roep de hulp in van de email helderziendheid van Frederick op ClairVoyanceMedium.com voor duidelijke voorspellingen. Financiële twijfels blokkeren uw welvaart. Frederick stuurt u openbaringen per email. Vanaf €6,00 beveiligt u uw financiële toekomst. Voordelen: helderheid en verzekerde overvloed." }
+];
+
+// Voorbereiding van de kennisbank
+function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function levenshteinDistance(a, b) {
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+    for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+    for (let j = 0; j <= b.length; j++) matrix[j][0] = j;
+    for (let j = 1; j <= b.length; j++) {
+        for (let i = 1; i <= a.length; i++) {
+            const indicator = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[j][i] = Math.min(
+                matrix[j][i - 1] + 1,
+                matrix[j - 1][i] + 1,
+                matrix[j - 1][i - 1] + indicator
+            );
+        }
+    }
+    return matrix[b.length][a.length];
+}
+
+function phoneticNormalize(str) {
+    return removeAccents(str)
+        .replace(/ph/g, "f")
+        .replace(/k/g, "c")
+        .replace(/qu/g, "k")
+        .replace(/ss/g, "s")
+        .replace(/ée/g, "e")
+        .replace(/ai/g, "e");
+}
+
+const processedKnowledgeBase = knowledgeBase.map(item => ({
+    question: item.question.toLowerCase().split("|").map(word => phoneticNormalize(removeAccents(word.trim()))).filter(word => word.length > 0),
+    fullAnswer: item.fullAnswer
+}));
+
+let nonUnderstoodCount = 0;
+let conversationHistory = [];
+
+function cleanInput(input) {
+    return input.toLowerCase().replace(/[^\w\s]/g, "").split(/\s+/).map(word => phoneticNormalize(removeAccents(word))).filter(word => word.length > 0);
+}
+
+function findBestMatch(userInput) {
+    const userWords = cleanInput(userInput);
+    let bestMatch = null, maxScore = 0;
+
+    processedKnowledgeBase.forEach(item => {
+        let score = 0;
+        userWords.forEach(userWord => {
+            item.question.forEach(kbWord => {
+                const distance = levenshteinDistance(userWord, kbWord);
+                const similarity = 1 - distance / Math.max(userWord.length, kbWord.length);
+                if (similarity >= 0.6) {
+                    score += similarity;
+                }
+            });
+        });
+        if (score > maxScore) {
+            maxScore = score;
+            bestMatch = item;
+        }
+    });
+
+    return maxScore > 0 ? bestMatch : null;
+}
+
+// Gecorrigeerde getResponse functie voor "tot ziens" en "contact"
+function getResponse(userMsg) {
+    const lowerMsg = userMsg.toLowerCase().trim();
+    conversationHistory.push(lowerMsg);
+
+    // Prioritaire controle voor "tot ziens" en varianten
+    const goodbyeTriggers = ["tot ziens", "totziens", "tot snel", "fijne dag", "dag", "totziens", "tot ziens"];
+    if (goodbyeTriggers.some(phrase => lowerMsg === phrase || lowerMsg.startsWith(phrase))) {
+        nonUnderstoodCount = 0;
+        trackClick("Afscheid", "Interactie", 0);
+        return translations.goodbye;
+    } 
+    // Prioritaire controle voor "contact"
+    else if (lowerMsg === "contact" || lowerMsg.startsWith("contact")) {
+        nonUnderstoodCount = 0;
+        trackClick("ContactVerzoek", "Interactie", 0);
+        return "Neem nu contact op met Frederick via email: contact.clairvoyancemedium@gmail.com. Ons team zal u zeer snel antwoorden, waardoor u een transformatie gegarandeerd krijgt die aan uw behoeften is aangepast. Voordelen: reactiviteit en zelfverbetering.";
+    } 
+    // Andere basisantwoorden
+    else if (lowerMsg === "hallo") {
+        nonUnderstoodCount = 0;
+        trackClick("Begroeting", "Interactie", 0);
+        return translations.greeting;
+    } else if (lowerMsg === "dank u" || lowerMsg === "bedankt" || lowerMsg === "dankjewel" || lowerMsg === "heel erg bedankt") {
+        nonUnderstoodCount = 0;
+        trackClick("Dank", "Interactie", 0);
+        return translations.thanks;
+    } else if (["het is ernstig", "ernstig", "het is heel ernstig"].includes(lowerMsg)) {
+        nonUnderstoodCount = 0;
+        trackClick("Ernstig", "Interactie", 0);
+        return translations.grave;
+    } else if (["akkoord", "ja", "jep", "ok"].includes(lowerMsg)) {
+        nonUnderstoodCount = 0;
+        return translations.agree;
+    } 
+    // Zoeken in de kennisbank
+    else {
+        const matchedItem = findBestMatch(userMsg);
+        if (matchedItem) {
+            nonUnderstoodCount = 0;
+            trackClick("AntwoordGegeven", "Interactie", 0);
+            return matchedItem.fullAnswer;
+        } else {
+            nonUnderstoodCount++;
+            trackClick("NietBegrepen", "Interactie", nonUnderstoodCount);
+            if (nonUnderstoodCount < 3) return translations.notUnderstood;
+            nonUnderstoodCount = 0;
+            return translations.notUnderstoodAfter;
+        }
+    }
+}
+
+// Verzamelen van site-inhoud bij laden
+const siteContent = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('h1, h2, h3, p, li').forEach(element => {
+        const text = element.textContent.trim().toLowerCase();
+        if (text) siteContent.push({ text: cleanInput(text), raw: element.textContent });
+    });
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(script => {
+        try {
+            const data = JSON.parse(script.textContent);
+            if (data['@type'] === 'FAQPage' && data.mainEntity) {
+                data.mainEntity.forEach(item => {
+                    const question = item.name.toLowerCase().trim();
+                    const answer = item.acceptedAnswer.text.trim();
+                    if (question && answer) siteContent.push({ text: cleanInput(question), raw: answer });
+                });
+            }
+        } catch (e) {
+            console.error("Fout bij het parsen van JSON-LD:", e);
+        }
+    });
+});
+
+function getResponseFromSite(userMsg, callback) {
+    const matchedItem = findBestMatch(userMsg);
+    if (matchedItem) {
+        callback(matchedItem.fullAnswer);
+    } else {
+        const userWords = cleanInput(userMsg);
+        let bestMatch = null, maxScore = 0;
+
+        siteContent.forEach(item => {
+            let score = 0;
+            userWords.forEach(userWord => {
+                item.text.forEach(siteWord => {
+                    const distance = levenshteinDistance(userWord, siteWord);
+                    const similarity = 1 - distance / Math.max(userWord.length, siteWord.length);
+                    if (similarity >= 0.6) {
+                        score += similarity;
+                    }
+                });
+            });
+            if (score > maxScore) {
+                maxScore = score;
+                bestMatch = item.raw;
+            }
+        });
+
+        if (maxScore > 0 && bestMatch) {
+            callback(bestMatch);
+        } else {
+            callback(getResponse(userMsg));
+        }
+    }
+}
+
+function simulateTyping(callback) {
+    const typingMessage = document.createElement("p");
+    typingMessage.className = "bot-message";
+    typingMessage.textContent = "...";
+    chatMessages.appendChild(typingMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    setTimeout(() => {
+        chatMessages.removeChild(typingMessage);
+        callback();
+    }, conversationHistory.length > 2 ? 1000 : 800);
+}
+
+function addMessage(txt, cls) {
+    const p = document.createElement("p");
+    p.className = cls;
+    p.textContent = txt;
+    chatMessages.appendChild(p);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    if (cls === "bot-message" && voiceEnabled) speak(txt);
+}
+
+// Verplaatsingsbeheer
+let isDragging = false, currentX = 0, currentY = 0, initialX, initialY;
+const dragHandle = document.getElementById("chat-bubble");
+const chatContainer = document.getElementById("chat-container");
+const chatBox = document.getElementById("chat-box");
+const chatMessages = document.getElementById("chat-messages");
+
+dragHandle.addEventListener("mousedown", startDragging);
+dragHandle.addEventListener("touchstart", startDragging, { passive: false });
+document.addEventListener("mousemove", drag);
+document.addEventListener("mouseup", stopDragging);
+document.addEventListener("touchmove", drag, { passive: false });
+document.addEventListener("touchend", stopDragging);
+
+function startDragging(e) {
+    isDragging = true;
+    if (e.type === "mousedown") {
+        initialX = e.clientX - currentX;
+        initialY = e.clientY - currentY;
+    } else if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - currentX;
+        initialY = e.touches[0].clientY - currentY;
+    }
+}
+
+function drag(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    let newX = e.type === "mousemove" ? e.clientX - initialX : e.touches[0].clientX - initialX;
+    let newY = e.type === "mousemove" ? e.clientY - initialY : e.touches[0].clientY - initialY;
+    const rect = chatContainer.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width;
+    const maxY = window.innerHeight - rect.height;
+    currentX = Math.max(0, Math.min(newX, maxX));
+    currentY = Math.max(0, Math.min(newY, maxY));
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+}
+
+function stopDragging() {
+    isDragging = false;
+}
+
+window.addEventListener('load', () => {
+    const rect = chatContainer.getBoundingClientRect();
+    currentX = window.innerWidth - rect.width - 20;
+    currentY = window.innerHeight - rect.height - 20;
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+});
+
+function adjustChatContainerPosition() {
+    const rect = chatContainer.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width;
+    const maxY = window.innerHeight - rect.height;
+    currentX = Math.min(currentX, maxX);
+    currentX = Math.max(0, currentX);
+    currentY = Math.min(currentY, maxY);
+    currentY = Math.max(0, currentY);
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+}
+
+window.addEventListener('resize', adjustChatContainerPosition);
+
+const chatToggle = document.getElementById("chat-toggle");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
+let firstOpen = true;
+
+chatToggle.addEventListener("click", () => {
+    const isHidden = !chatBox.classList.contains("visible");
+    if (isHidden) {
+        chatContainer.style.width = "300px";
+        chatBox.classList.add("visible");
+        chatToggle.setAttribute("aria-expanded", "true");
+        trackClick("ChatOpen", "Interactie", 0);
+        if (!chatMessages.children.length) addMessage(translations.greeting, "bot-message");
+        adjustChatContainerPosition();
+        setTimeout(() => chatInput.focus(), 300);
+        if (firstOpen && ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) && recognition) {
+            recognition.start();
+            firstOpen = false;
+        }
+    } else {
+        chatBox.classList.remove("visible");
+        chatToggle.setAttribute("aria-expanded", "false");
+        trackClick("ChatClose", "Interactie", 0);
+        chatContainer.style.width = "auto";
+        chatContainer.style.height = "auto";
+        adjustChatContainerPosition();
+    }
+});
+
+chatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const userMsg = chatInput.value.trim();
+    if (!userMsg) return;
+    addMessage(userMsg, "user-message");
+    trackClick("ChatBericht", "Interactie", 0);
+    chatInput.value = "";
+    simulateTyping(() => {
+        getResponseFromSite(userMsg, (answer) => {
+            addMessage(answer, "bot-message");
+        });
+    });
+});
+
+let voiceEnabled = true;
+
+function speak(text) {
+    if (!voiceEnabled || !("speechSynthesis" in window)) return;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "nl-NL";
+    utterance.pitch = 0.5;
+    utterance.rate = 1.1;
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length > 0) {
+        const maleVoice = voices.find(v => v.name.toLowerCase().includes("male") || v.name.toLowerCase().includes("nederlands"));
+        if (maleVoice) utterance.voice = maleVoice;
+    }
+    window.speechSynthesis.speak(utterance);
+    trackClick("SpraakUitvoer", "Interactie", 0);
+}
+
+const voiceToggle = document.getElementById("voice-toggle");
+voiceToggle.addEventListener("click", () => {
+    voiceEnabled = !voiceEnabled;
+    voiceToggle.classList.toggle("disabled", !voiceEnabled);
+    trackClick(voiceEnabled ? "SpraakIngeschakeld" : "SpraakUitgeschakeld", "Interactie", 0);
+});
+
+let speechRecognitionSupported = "SpeechRecognition" in window || "webkitSpeechRecognition" in window;
+let recognition = null;
+
+if (speechRecognitionSupported) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = "nl-NL";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        addMessage(transcript, "user-message");
+        trackClick("SpraakInvoer", "Interactie", 0);
+        simulateTyping(() => {
+            getResponseFromSite(transcript, (answer) => {
+                addMessage(answer, "bot-message");
+            });
+        });
+    };
+    recognition.onend = () => trackClick("SpraakStop", "Interactie", 0);
+    recognition.onerror = (event) => trackClick("SpraakFout", "Interactie", event.error);
+}
+
+if (!("speechSynthesis" in window)) voiceToggle.style.display = "none";
 <script nonce="xai-ultra2025">
 
 <!-- Scripts JavaScript -->
