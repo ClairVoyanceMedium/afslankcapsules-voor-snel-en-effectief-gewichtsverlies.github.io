@@ -1,42 +1,283 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# robots.txt v3.5 - 2025-05-28
+# Geoptimaliseerd voor https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/
+# Doelen: Wereldwijde SEO, ultra-frequent crawlen, ondersteuning voor AI/spraakassistenten/sociale media, meertalig, maximale bescherming
+
+# --- Algemene richtlijnen voor alle legitieme crawlers ---
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Allow: /
+Allow: /[a-z]{2}/  # Meertalige pagina's (/nl/, /en/, /de/, etc.)
+Allow: /voorwaarden/     # Openbare algemene voorwaarden
+Allow: /fonts/     # Lettertypen voor weergave
+Allow: /afbeeldingen/    # Afbeeldingen voor indexering
+Allow: /js/        # Interactieve scripts
+Allow: /css/       # Mobile-first CSS
+Allow: /*.webp$    # WebP-afbeeldingen
+Allow: /*.jpg$     # JPG-afbeeldingen
+Allow: /*.png$     # PNG-afbeeldingen
+Allow: /*.gif$     # GIF-afbeeldingen
+Allow: /*.js$      # JavaScript-scripts
+Allow: /*.css$     # CSS-bestanden
+Disallow: /csp-rapport-eindpunt/  # CSP beschermen
+Disallow: /contact/             # Contactpagina
+Disallow: /privacy/             # Privacybeleid
+Disallow: /afrekenen/            # Transactiepaden
+Disallow: /zoeken/              # Zoekpagina's
+Disallow: /api/                 # API-eindpunten
+Disallow: /test/                # Testmappen
+Disallow: /staging/             # Staging-omgevingen
+Clean-param: utm_source&utm_medium&utm_campaign&lang&sessie_id  # Nuttige parameters toestaan
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+# --- Richtlijnen voor Googlebot (Google, Google Assistant) ---
 User-agent: Googlebot
+Crawl-delay: 1
+Allow: /blog/      # Rijke inhoud voor SEO
+Allow: /artikel/   # Artikelen voor snippets
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Googlebot-Image ---
+User-agent: Googlebot-Image
+Allow: /afbeeldingen/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Disallow: /favicon_geoptimaliseerd.webp  # Favicon vermijden
+
+# --- Richtlijnen voor Googlebot-Video ---
+User-agent: Googlebot-Video
+Crawl-delay: 1
 Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Allow: /[a-z]{2}/
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Bingbot (Bing, Cortana) ---
 User-agent: Bingbot
+Crawl-delay: 2
+Allow: /blog/
+Allow: /artikel/
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Yandex (Yandex, Alice) ---
+User-agent: Yandex
+Crawl-delay: 3
+Allow: /blog/
+Allow: /artikel/
+Clean-param: utm_source&utm_medium&utm_campaign&lang&sessie_id
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Baiduspider (China) ---
+User-agent: Baiduspider
+Crawl-delay: 3
+Allow: /zh/        # Prioriteit voor Chinees
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+Disallow: /api/
+Disallow: /test/
+Disallow: /staging/
+
+# --- Richtlijnen voor Sogou (China) ---
+User-agent: Sogou
+Crawl-delay: 4
+Allow: /zh/
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+Disallow: /api/
+Disallow: /test/
+Disallow: /staging/
+
+# --- Richtlijnen voor Applebot (Siri, Apple) ---
+User-agent: Applebot
+Crawl-delay: 2
+Allow: /blog/
+Allow: /artikel/
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Amazonbot (Alexa, Amazon) ---
+User-agent: Amazonbot
+Crawl-delay: 3
+Allow: /blog/
+Allow: /artikel/
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Naverbot (Japan/Korea) ---
+User-agent: Naverbot
+Crawl-delay: 3
+Allow: /ja/        # Prioriteit voor Japans
+Allow: /ko/        # Prioriteit voor Koreaans
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor SeznamBot (Tsjechië) ---
+User-agent: SeznamBot
+Crawl-delay: 3
+Allow: /cs/        # Prioriteit voor Tsjechisch
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor Qwantify (Qwant, Europa) ---
+User-agent: Qwantify
+Crawl-delay: 4
+Allow: /fr/        # Prioriteit voor Frans
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor DuckDuckGoBot (Wereldwijd) ---
+User-agent: DuckDuckGoBot
+Crawl-delay: 2
 Allow: /
+Allow: /[a-z]{2}/
+Allow: /blog/
+Allow: /artikel/
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
+# --- Richtlijnen voor JioSphere (India) ---
+User-agent: JioSphere
+Crawl-delay: 3
+Allow: /hi/        # Prioriteit voor Hindi
+Allow: /blog/
+Allow: /artikel/
+Clean-param: lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Richtlijnen voor conversationele AI-crawlers ---
+User-agent: Grok
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: openai-crawler
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: cohere-ai
+User-agent: PerplexityBot
+User-agent: CCBot
+User-agent: youbot
+User-agent: phindbot
+User-agent: GeminiBot  # Google AI
+Crawl-delay: 4
+Allow: /
+Allow: /[a-z]{2}/
+Allow: /blog/      # Conversatie-extracten
+Allow: /artikel/
+Allow: /afbeeldingen/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+Disallow: /api/
+Disallow: /test/
+Disallow: /staging/
+
+# --- Richtlijnen voor sociale media-crawlers ---
+User-agent: FacebookBot
+User-agent: Twitterbot
+User-agent: redditbot
+User-agent: TikTokBot  # Opkomende sociale media
+Crawl-delay: 2
+Allow: /
+Allow: /[a-z]{2}/
+Allow: /blog/      # Sociale previews
+Allow: /artikel/
+Allow: /afbeeldingen/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Blokkeer ongewenste crawlers ---
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: PetalBot
+User-agent: DotBot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+# --- Sta SemrushBot toe voor SEO-audits ---
+User-agent: SemrushBot
+Crawl-delay: 5
+Allow: /
+Allow: /[a-z]{2}/
+Allow: /blog/
+Allow: /artikel/
+Allow: /afbeeldingen/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Clean-param: utm_source&utm_medium&utm_campaign&lang
+Disallow: /csp-rapport-eindpunt/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /afrekenen/
+
+# --- Bescherming tegen niet-herkende crawlers ---
+User-agent: *
+Disallow: /  # Standaard blokkeren tenzij expliciet toegestaan
+
+# --- Optimalisatie van crawlen ---
+Crawl-delay: 1
+Request-rate: 1/4  # 1 verzoek/4s voor snel crawlen
+
+# --- Sitemap index ---
+Sitemap: https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/sitemap-index.xml
