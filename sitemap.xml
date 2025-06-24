@@ -1,104 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- 🔥 Page d'accueil (Priorité maximale) -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/</loc>
-        <lastmod>2025-02-17</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/homepage-main.jpg</image:loc>
-            <image:title>Retrouver l'Amour Rapidement</image:title>
-            <image:caption>Techniques puissantes pour attirer et garder l'amour.</image:caption>
-        </image:image>
-    </url>
-
-    <!-- 🔍 Pages principales -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/rituels-amour/</loc>
-        <lastmod>2025-02-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/rituels-amour.jpg</image:loc>
-            <image:title>Rituels d'Amour Puissants</image:title>
-            <image:caption>Découvrez comment les rituels d’amour peuvent renforcer vos relations.</image:caption>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/voyance-email/</loc>
-        <lastmod>2025-02-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/voyance-email.jpg</image:loc>
-            <image:title>Voyance par E-mail</image:title>
-            <image:caption>Posez vos questions à un voyant expérimenté par e-mail.</image:caption>
-        </image:image>
-    </url>
-
-    <!-- 🎥 Contenu Vidéo (avec ID réel de la vidéo) -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/videos/comment-seduire-vite/</loc>
-        <lastmod>2025-02-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <video:video>
-            <video:player_loc>https://www.youtube.com/watch?v=ABCD1234EFG</video:player_loc>
-            <video:thumbnail_loc>https://clairvoyancemedium.github.io/images/video-thumbnail.jpg</video:thumbnail_loc>
-            <video:title>Comment séduire rapidement</video:title>
-            <video:description>Découvrez les meilleures techniques pour séduire efficacement.</video:description>
-        </video:video>
-    </url>
-
-    <!-- 📰 Articles Google News -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/news/nouvelle-technique-de-seduction/</loc>
-        <lastmod>2025-02-13</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-        <news:news>
-            <news:publication>
-                <news:name>Voyance & Amour News</news:name>
-                <news:language>fr</news:language>
-            </news:publication>
-            <news:publication_date>2025-02-13</news:publication_date>
-            <news:title>Nouvelle Technique de Séduction Révélée</news:title>
-            <news:keywords>séduction, amour, relation</news:keywords>
-        </news:news>
-    </url>
-
-    <!-- 📱 Page optimisée pour mobile -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/mobile/</loc>
-        <lastmod>2025-02-17</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-        <mobile:mobile/>
-    </url>
-
-    <!-- 📜 Pages légales -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/mentions-legales/</loc>
-        <lastmod>2025-01-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/cgv/</loc>
-        <lastmod>2025-01-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+  <!-- Nederlandse hoofdpagina (hoogste prioriteit voor NL markt) -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/de/" />
+    <image:image>
+      <image:loc>https://i.imgur.com/x9jJPra.jpg</image:loc>
+      <image:title>Afslankcapsules voor Snel Gewichtsverlies</image:title>
+      <image:caption>Natuurlijke en effectieve oplossing voor gewichtsverlies in Nederland</image:caption>
+      <image:geo_location>Netherlands</image:geo_location>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Dj-pfiIzB44/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Snel Afvallen Met Onze Afslankcapsules</video:title>
+      <video:description>Ontdek hoe onze natuurlijke afslankcapsules je helpen snel en veilig gewicht te verliezen</video:description>
+      <video:content_loc>https://www.youtube.com/shorts/Dj-pfiIzB44</video:content_loc>
+      <video:publication_date>2025-06-25</video:publication_date>
+      <video:duration>60</video:duration>
+      <video:view_count>15000</video:view_count>
+      <video:category>Gezondheid</video:category>
+      <video:tag>afslanken</video:tag>
+      <video:tag>gewichtsverlies</video:tag>
+      <video:tag>nederland</video:tag>
+      <video:author>Afslankcapsules Team</video:author>
+      <video:license>https://www.afslankcapsules.nl/algemene-voorwaarden</video:license>
+      <video:rating>4.9</video:rating>
+    </video:video>
+  </url>
+  
+  <!-- Internationale hoofdpagina -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/de/" />
+    <image:image>
+      <image:loc>https://i.imgur.com/x9jJPra.jpg</image:loc>
+      <image:title>Weight Loss Capsules for Fast Results</image:title>
+      <image:caption>Natural and effective weight loss solution globally</image:caption>
+      <image:geo_location>Global</image:geo_location>
+    </image:image>
+  </url>
+  
+  <!-- Productpagina 1 -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/producten/premium-afslankcapsules/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://i.imgur.com/product1.jpg</image:loc>
+      <image:title>Premium Afslankcapsules - Snel Resultaat</image:title>
+      <image:caption>Onze meest krachtige formule voor snel gewichtsverlies</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/product1.jpg</video:thumbnail_loc>
+      <video:title>Premium Afslankcapsules Werking</video:title>
+      <video:description>Zie hoe onze premium capsules werken voor optimaal gewichtsverlies</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=product1</video:content_loc>
+      <video:publication_date>2025-06-24</video:publication_date>
+      <video:duration>120</video:duration>
+    </video:video>
+  </url>
+  
+  <!-- Productpagina 2 -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/producten/nachtelijke-vetverbrander/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://i.imgur.com/product2.jpg</image:loc>
+      <image:title>Nachtelijke Vetverbrander Capsules</image:title>
+      <image:caption>Verbrand vet terwijl je slaapt met onze speciale nachtformule</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Blog sectie -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/blog/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://i.imgur.com/blogmain.jpg</image:loc>
+      <image:title>Blog over Afslanken en Gezond Leven</image:title>
+      <image:caption>Tips en adviezen voor effectief gewichtsverlies</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Blogartikel 1 -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/blog/5-tips-voor-snel-gewichtsverlies/</loc>
+    <lastmod>2025-06-24T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+    <news:news>
+      <news:publication>
+        <news:name>Afslankcapsules Blog</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-24</news:publication_date>
+      <news:title>5 Bewezen Tips voor Snel Gewichtsverlies</news:title>
+      <news:keywords>afslanken, gewichtsverlies, dieet, tips, nederland</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://i.imgur.com/blog1.jpg</image:loc>
+      <image:title>5 Tips voor Snel Afvallen</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Blogartikel 2 -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/blog/waarom-afslankcapsules-werken/</loc>
+    <lastmod>2025-06-20T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+    <news:news>
+      <news:publication>
+        <news:name>Afslankcapsules Blog</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-06-20</news:publication_date>
+      <news:title>Waarom Onze Afslankcapsules Zo Effectief Zijn</news:title>
+      <news:keywords>afslankcapsules, werking, ingrediënten, onderzoek</news:keywords>
+    </news:news>
+  </url>
+  
+  <!-- Veelgestelde vragen -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/veelgestelde-vragen/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Contactpagina -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/contact/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Klantrecensies -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/ervaringen/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://i.imgur.com/reviews.jpg</image:loc>
+      <image:title>Echte Ervaringen van Nederlandse Gebruikers</image:title>
+      <image:caption>Lees wat onze klanten zeggen over onze afslankcapsules</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Kennisbank -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/kennisbank/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+  
+  <!-- Wetenschappelijk onderzoek -->
+  <url>
+    <loc>https://clairvoyancemedium.github.io/afslankcapsules-voor-snel-en-effectief-gewichtsverlies.github.io/nl/wetenschap/</loc>
+    <lastmod>2025-06-25T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+    <image:image>
+      <image:loc>https://i.imgur.com/science.jpg</image:loc>
+      <image:title>Wetenschappelijk Onderzoek Onze Formule</image:title>
+      <image:caption>Bewezen effectiviteit van onze afslankcapsules</image:caption>
+    </image:image>
+  </url>
 </urlset>
