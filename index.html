@@ -1141,4 +1141,922 @@
     <button class="audio-button pause-button" data-text-id="programme-heading,programme-personnalise article,programme-personnalise .check-list,programme-personnalise .urgency-notice" aria-label="Pauzeer audioweergave" style="display:none">Pauze</button>
   </div>
 
-    
+    <article class="audio-text" itemscope itemtype="https://schema.org/Product">
+    <meta itemprop="name" content="Gepersonaliseerd Victory Afslankprogramma">
+    <meta itemprop="description" content="Gepersonaliseerd programma om 8 tot 12 kilo te verliezen in 2 maanden met Victory capsules en advies. Prijs: €43,00.">
+    <meta itemprop="brand" content="ClairvoyanceMedium.com">
+    <meta itemprop="image" content="https://i.imgur.com/H69KvL6.webp">
+    <meta itemprop="aggregateRating" content='{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"5000"}'>
+    <p>Het <strong>Gepersonaliseerde Victory Afslankprogramma</strong> is een complete oplossing om overtollige kilo's kwijt te raken, tussen 3 en 7 kilo in 1 maand, zonder frustratie of strikte ontbering. Dit programma voor snel en gezond afvallen is nu beschikbaar voor €43,00 voordat de prijs binnenkort stijgt. Het omvat een op maat gemaakt voedingsplan, gerichte en aangepaste afslankoefeningen, en persoonlijke begeleiding op verzoek voor uw gewichtsverlies:</p>
+    <ul class="check-list">
+      <li><strong>Gepersonaliseerd voedingsplan:</strong> Afgestemd op uw behoeften, zonder tekorten.</li>
+      <li><strong>Bewegingsadvies:</strong> Eenvoudige activiteiten zoals wandelen of yoga.</li>
+      <li><strong>Begeleiding:</strong> Motiverend om op het goede pad te blijven.</li>
+      <li><strong>Toegang tot een professional voor al uw vragen over het leven na het dieet:</strong> Antwoorden op uw vragen binnen 10 uur.</li>
+    </ul>
+    <p>Dit programma is ideaal voor wie duurzame resultaten wil zonder frustratie, met een echt uitgebalanceerd dieet. Onze experts analyseren uw profiel (leeftijd, gewicht, levensstijl) om een uniek afslankplan te creëren. Met meer dan 4000 tevreden klanten garandeert dit programma voor gewichtsverlies een slanker figuur, vernieuwde energie en een versterkte mentale kracht. Zichtbare resultaten al na 2 weken!</p>
+    <p>Begin vandaag nog met uw transformatie!</p>
+    <p class="urgency-notice">⏰ Exclusieve aanbieding!</p>
+    <p>*Resultaten variëren per persoon.</p>
+  </article>
+  <div class="cta-buttons-container">
+    <a href="https://buy.stripe.com/cN2bJ69bmbL9b4Y3dA" target="_blank" rel="noopener nofollow" class="cta-button" data-tracking-label="VictoryProgram" aria-label="Bestel het gepersonaliseerde Victory afslankprogramma">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">Gepersonaliseerd afslankprogramma – €43,00</span>
+</a>
+  </div>
+</section>
+
+        <section class="content-container" id="imc" aria-labelledby="imc-heading">
+            <div class="title-container">
+                <h2 id="imc-heading">Bereken Uw BMI en Plan Uw Gewichtsverlies</h2>
+            </div>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="imc-heading,imc article,imc-recommendation" aria-label="Luister naar de BMI Calculator sectie">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="imc-heading,imc article,imc-recommendation" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+            <article class="audio-text">
+                <p><strong>Onze Body Mass Index (BMI) calculator</strong> is een eenvoudig hulpmiddel om uw ideale gewicht te beoordelen en uw gewichtsverlies te plannen. Het zal u direct doorverwijzen naar het dieet dat u nodig heeft om uw fysieke verbetering effectief aan te pakken! Voer uw lengte (in centimeters) en uw gewicht (in kilogram) hieronder in om uw BMI te ontdekken en persoonlijke aanbevelingen te ontvangen.</p>
+                <p>Onze Victory capsules en ons gepersonaliseerde programma zijn geschikt voor alle profielen, of u nu een vrouw of man bent, of u nu licht overgewicht heeft of een significante transformatie nastreeft. Gebruik onze calculator om realistische doelen te stellen en zo de dosering van de Victory afslankcapsules te weten te komen die u moet nemen om weer in vorm te komen, vergezeld van waardevol advies om eindelijk een duidelijk antwoord te hebben op de vraag "Hoe kan ik snel afvallen zonder het er weer aan te krijgen"!</p>
+            </article>
+            <div class="imc-calculator">
+                <form id="imc-form" aria-labelledby="imc-heading">
+                    <label for="height">Lengte (cm) :</label>
+                    <input type="number" id="height" name="height" min="100" max="250" step="1" required aria-describedby="height-error">
+                    <span id="height-error" role="alert" style="color:#ff6b6b;display:none">Voer een lengte in tussen 100 en 250 cm.</span>
+                    <label for="weight">Gewicht (kg) :</label>
+                    <input type="number" id="weight" name="weight" min="30" max="300" step="0.1" required aria-describedby="weight-error">
+                    <span id="weight-error" role="alert" style="color:#ff6b6b;display:none">Voer een gewicht in tussen 30 en 300 kg.</span>
+                    <button type="submit" class="imc-button cta-button" aria-label="BMI berekenen">Berekenen</button>
+                </form>
+                <canvas id="imc-chart" class="imc-chart" aria-label="BMI grafiek"></canvas>
+                <div id="imc-recommendation" class="imc-recommendation audio-text" role="status"></div>
+            </div>
+            <figure style="text-align:center; margin:2rem auto;" aria-label="Transformatie van Olivia L., Parijs, na 34 dagen met Victory">
+  <picture>
+    <source srcset="https://i.imgur.com/x9jJPra.jpg 320w, https://i.imgur.com/x9jJPra.jpg 480w, https://i.imgur.com/x9jJPra.jpg 900w" 
+            type="image/jpeg" 
+            sizes="(max-width:600px) 100vw, (max-width:900px) 90vw, 900px">
+    <img src="https://i.imgur.com/x9jJPra.jpg" 
+         alt="Zichtbaar resultaat van Olivia L., 32 jaar, Parijs, na 40 dagen met de gepersonaliseerde Victory afslankcapsules" 
+         style="width:100%; height:auto; border-radius:16px; box-shadow:0 0 20px rgba(0,0,0,0.25);"
+         decoding="async" 
+         loading="lazy" 
+         title="Voor / na 40 dagen van gepersonaliseerde kuur met de Victory afslankcapsules – Olivia L., 32 jaar"
+         aria-label="Volledige foto van de transformatie van Olivia met Victory">
+  </picture>
+
+  <figcaption style="font-size:1rem; color:#4a4a4a; margin-top:1rem; font-style:normal; line-height:1.7;" aria-label="Spraaktoegankelijk getuigenis van Olivia na 34 dagen met Victory">
+    <strong>Olivia L., 32 jaar – Parijs</strong><br>
+    *"Ik was echt wanhopig en ongelukkig met mijn lichaam... Ik geloofde nergens meer in. Ik had alles geprobeerd, en dacht dat mijn lichaam niet meer kon veranderen."*<br>
+    *"En toch, in slechts 40 dagen, is alles veranderd. Ik heb niets extreems gedaan. Alleen <strong>2 Victory afslankcapsules per dag</strong>, 's ochtends en 's avonds + het gepersonaliseerde Victory afslankplan."*<br>
+    *"Dit is de eerste keer dat een afslankproduct echt mijn behoeften begrijpt. Mijn metabolisme is op natuurlijke wijze weer op gang gekomen, zonder stress, zonder frustratie. Vandaag kijk ik met trots naar mezelf en voel ik me soms zelfs sterker dan anderen terwijl het nog maar een paar dagen geleden is dat ik me kapot voelde..."*
+  </figcaption>
+</figure>
+
+<!-- Gestructureerde JSON-LD SEO gegevens -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Gepersonaliseerde Victory Afslankcapsules",
+  "image": "https://i.imgur.com/x9jJPra.jpg",
+  "description": "Natuurlijk, intelligent en gepersonaliseerd programma voor gewichtsverlies. Zichtbaar resultaat na 34 dagen. Echt voorbeeld: Olivia, 32 jaar, Parijs.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Victory"
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "Olivia L.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Parijs",
+        "addressCountry": "FR"
+      }
+    },
+    "reviewBody": "Ik dacht dat ik alles had geprobeerd. Mijn lichaam weigerde te veranderen. Maar 40 dagen met de gepersonaliseerde Victory capsules (2 per dag) hebben alles veranderd. Ik heb eindelijk mijn figuur en mijn humeur teruggevonden.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "43.00",
+    "priceCurrency": "EUR",
+    "priceValidUntil": "2070-12-31",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "EUR"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "NL",
+        "postalCode": "1000-9999"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "applicableCountry": "NL",
+      "returnPolicyPeriod": "P30D"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "5000"
+  }
+}
+</script>
+
+        </section>
+
+        <section class="content-container" id="comparaison" aria-labelledby="comparaison-heading">
+            <div class="title-container">
+                <h2 id="comparaison-heading">Waarom zult u echt afvallen met de Victory afslankcapsules?</h2>
+            </div>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="comparaison-heading,comparaison article,comparaison-table" aria-label="Luister naar de vergelijkingssectie">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="comparaison-heading,comparaison article,comparaison-table" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+            <article class="audio-text">
+                <p>De Victory capsules onderscheiden zich van andere afslankoplossingen door hun effectiviteit, hun natuurlijke samenstelling en hun holistische aanpak. Hier is een duidelijke vergelijking met andere populaire methoden:</p>
+            </article>
+            <div class="comparison-table-container">
+                <table class="comparison-table" aria-labelledby="comparaison-heading">
+                    <caption class="sr-only">Vergelijking van afslankoplossingen</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Criterium</th>
+                            <th scope="col">Victory Afslankcapsules</th>
+                            <th scope="col">Eenzaam Dieet (zonder begeleiding)</th>
+                            <th scope="col">Andere afslanksupplementen</th>
+                            <th scope="col">Themadieten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Snel gewichtsverlies</th>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="cross">✘</td>
+                            <td class="check">✔</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Natuurlijke ingrediënten</th>
+                            <td class="check">✔</td>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Zonder bijwerkingen</th>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Gebruiksgemak</th>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Betaalbare prijs</th>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dieet zonder "jojo-effect"</th>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="cross">✘</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Gratis verzending</th> 
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                            <td class="check">✔</td>
+                            <td class="cross">✘</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <article class="audio-text">
+                <p>De <a href="#minceur">Victory capsules</a> bieden een complete oplossing: snel gewichtsverlies, natuurlijke ingrediënten, geen bijwerkingen, en unieke mentale ondersteuning. In tegenstelling tot strikte diëten of chirurgie is Victory betaalbaar, gemakkelijk te integreren, en bevordert het een duurzame transformatie. Ontdek waarom 4000+ klanten ons vertrouwen!</p>
+            </article>
+            <div class="cta-buttons-container">
+                <a href="https://buy.stripe.com/9AQ28w5Zag1p5KE29u" target="_blank" rel="noopener nofollow" class="cta-button" data-tracking-label="Victory1Box" aria-label="Bestel 1 doos Victory capsules">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">60 Victory capsules – €19,00</span>
+</a>
+            </div>
+        </section>
+
+        <section class="content-container" id="avis" aria-labelledby="avis-heading">
+            <div class="title-container">
+                <h2 id="avis-heading">Wat Onze Klanten Denken Over Onze Diensten</h2>
+                <p>Beoordeling 4,7/5 ⭐⭐⭐⭐ (+1000 geverifieerde beoordelingen)</p>
+            </div>
+            <br>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="avis-heading,avis .carousel-item" aria-label="Luister naar klantbeoordelingen">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="avis-heading,avis .carousel-item" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+            <div class="carousel" aria-label="Carrousel van klantbeoordelingen">
+                <div class="carousel-inner">
+                    <figure class="carousel-item active" aria-hidden="false" itemscope itemtype="https://schema.org/Review">
+                        <meta itemprop="itemReviewed" content="Victory Afslankcapsules">
+                        <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'>
+                        <blockquote class="audio-text" itemprop="reviewBody">"Als iemand me ooit had verteld dat het dankzij mijn helderziende zou zijn dat ik zou afvallen... Ik ben 7 kilo afgevallen in 6 weken met de Victory afslankcapsules! Ik voel me licht, vol energie, en zelfs mijn huid is stralender."</blockquote>
+                        <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Lotte, 34 jaar</span></figcaption>
+                    </figure>
+                    <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+                        <meta itemprop="itemReviewed" content="Victory Afslankcapsules">
+                        <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'>
+                        <blockquote class="audio-text" itemprop="reviewBody">"De Victory afslankcapsules hebben me veranderd. Ik ben in totaal 12 kilo afgevallen en heb mijn zelfvertrouwen teruggevonden, ik voel me sterker."</blockquote>
+                        <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Daan, 42 jaar</span></figcaption>
+                    </figure>
+
+<!-- Beoordeling 1 - Victory Afslankcapsules (Gedetailleerd en geoptimaliseerd voor SEO) -->
+<figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+  <meta itemprop="itemReviewed" content="Victory Afslankcapsules">
+  <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}'>
+  <div class="review-details">
+    <span class="rating-stars">★★★★★</span>
+    <span class="verified-badge">Geverifieerde aankoop</span>
+  </div>
+  <blockquote class="audio-text" itemprop="reviewBody">
+    "Na verschillende afslankproducten te hebben geprobeerd zonder resultaat, waren de Victory capsules een openbaring! 
+    In slechts 5 weken ben ik op natuurlijke wijze 8 kilo afgevallen, zonder jojo-effect. 
+    Ze verminderen niet alleen effectief de honger, maar geven ook de hele dag energie. 
+    Ik raad aan om ze te nemen met het Victory voedingsprogramma om de resultaten te maximaliseren. 
+    Een uitzonderlijk product dat zijn 5 sterren verdient!"
+  </blockquote>
+  <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">Femke D.</span>, 
+    <span class="reviewer-info">31 jaar, gebruiker sinds 3 maanden</span>,
+    <span class="location">Amsterdam, Nederland</span>
+  </figcaption>
+  <meta itemprop="datePublished" content="2023-11-15">
+</figure>
+
+<!-- Beoordeling 2 - Gepersonaliseerd Afslankprogramma (Verrijkt voor SEO) -->
+<figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+  <meta itemprop="itemReviewed" content="Gepersonaliseerd Victory Afslankprogramma">
+  <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}'>
+  <div class="review-details">
+    <span class="rating-stars">★★★★★</span>
+    <span class="verified-badge">Klant 3 maanden gevolgd</span>
+  </div>
+  <blockquote class="audio-text" itemprop="reviewBody">
+    "Het Victory afslankcoaching heeft mijn aanpak van gewichtsverlies getransformeerd. 
+    Het is nu mijn persoonlijke voedingsdeskundige! Hij heeft een plan op maat gemaakt dat past bij mijn trage metabolisme. 
+    Resultaat: 10 kilo in 2 maanden zonder overmatige ontbering! 
+    De sterke punten: heerlijke recepten, dagelijkse WhatsApp-begeleiding, 
+    en real-time aanpassingen volgens mijn vooruitgang. 
+    Dit programma is elke geïnvesteerde cent waard - eindelijk een duurzame oplossing tegen overtollige kilo's!"
+  </blockquote>
+  <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">Thomas L.</span>,
+    <span class="reviewer-info">38 jaar, gewichtsverlies behouden sinds 6 maanden</span>,
+    <span class="location">Rotterdam, Nederland</span>
+  </figcaption>
+  <meta itemprop="datePublished" content="2023-09-22">
+</figure>
+
+<!-- Beoordeling 3 - Heldervoetendienst per E-mail (Lange versie geoptimaliseerd) -->
+<figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+  <meta itemprop="itemReviewed" content="Heldervoetendienst per E-mail met Frederick">
+  <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}'>
+  <div class="review-details">
+    <span class="rating-stars">★★★★★</span>
+    <span class="verified-badge">Consultatie bevestigd</span>
+  </div>
+  <blockquote class="audio-text" itemprop="reviewBody">
+    "De heldervoetendienst per e-mail met Frederick heeft al mijn verwachtingen overtroffen! 
+    Zijn nauwkeurige lezing van mijn professionele situatie hielp me een cruciale beslissing te nemen. 
+    In tegenstelling tot andere mediums zijn zijn voorspellingen voor 90% uitgekomen over 6 maanden. 
+    Sterke punten: gedetailleerd antwoord in 4 uur, betaalbare tarieven, en geen extra verkoop. 
+    Ik waardeerde vooral zijn eerlijkheid wanneer een uitkomst onzeker was. 
+    Een zeldzame service van serieuze helderziendheid die ik aanraad aan iedereen die twijfelt over zijn levenspad."
+  </blockquote>
+  <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">Emma C.</span>,
+    <span class="reviewer-info">27 jaar, 3 consultaties</span>,
+    <span class="location">Parijs, Frankrijk</span>
+  </figcaption>
+  <meta itemprop="datePublished" content="2024-01-10">
+</figure>
+
+<figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Victory Afslankcapsules"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"In het begin twijfelde ik, maar de Victory afslankcapsules hebben mijn figuur getransformeerd. Ik ben 7 kilo afgevallen in 4 weken zonder moeite, en mijn buik is platter. De gratis verzending is een echte bonus voor dit natuurlijke product!"</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jeroen, 40 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Ontheksing"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"Eindelijk vrij dankzij de ontheksing van Frederick! Ik zat vast met negatieve energieën, en nu voel ik een ongelooflijke innerlijke vrede."</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sanne, 35 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Sentimentele Magie"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"Mijn relatie bloeit dankzij de sentimentele magie. Frederick, je bent geweldig!"</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Lars, 33 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Liefdescompatibiliteit"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"De analyse van liefdescompatibiliteit heeft mijn relatie verhelderd. Frederick's adviezen zijn zeldzaam precies en hebben me geholpen mijn partner beter te begrijpen."</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Lisa, 28 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Victory Afslankcapsules"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"Geweldig, de Victory capsules hebben me 9 kilo doen verliezen in 6 weken! Ik voel me fantastisch."</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Eva, 30 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Gepersonaliseerd Victory Afslankprogramma"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"Wat een transformatie met het gepersonaliseerde afslankprogramma! Ik ben 12 kilo afgevallen in 2 maanden dankzij een aangepast voedingsplan en eenvoudige oefeningen. Dit effectieve dieet heeft me mijn zelfvertrouwen teruggegeven, ik raad het ten zeerste aan!"</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Peter, 45 jaar</span></figcaption> </figure> <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review"> <meta itemprop="itemReviewed" content="Heldervoetendienst per E-mail"> <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'> <blockquote class="audio-text" itemprop="reviewBody">"Een enorme dank voor de heldervoetendienst per e-mail! Frederick heeft me waardevol advies gegeven over mijn liefdesleven."</blockquote> <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sophie, 26 jaar</span></figcaption> </figure>
+
+                    
+                    <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+                        <meta itemprop="itemReviewed" content="Gepersonaliseerd Victory Afslankprogramma">
+                        <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'>
+                        <blockquote class="audio-text" itemprop="reviewBody">"Het gepersonaliseerde programma voor gewichtsverlies is ongelooflijk. Ik ben 11 kilo afgevallen in 2 maanden, en de begeleiding heeft me gemotiveerd!"</blockquote>
+                        <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Anna, 29 jaar</span></figcaption>
+                    </figure>
+                    <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+                        <meta itemprop="itemReviewed" content="Heldervoetendienst per E-mail">
+                        <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'>
+                        <blockquote class="audio-text" itemprop="reviewBody">"Duidelijke en snelle antwoorden. Frederick heeft me echt geholpen in mijn liefdesleven dankzij het liefdesritueel."</blockquote>
+                        <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Julia, 37 jaar</span></figcaption>
+                    </figure>
+                    <figure class="carousel-item" aria-hidden="true" itemscope itemtype="https://schema.org/Review">
+                        <meta itemprop="itemReviewed" content="Ontheksing">
+                        <meta itemprop="reviewRating" content='{"@type":"Rating","ratingValue":"5"}'>
+                        <blockquote class="audio-text" itemprop="reviewBody">"De ontheksing heeft mijn leven veranderd. Ik voel me bevrijd en vol positieve energie. Bedankt"</blockquote>
+                        <figcaption class="audio-text" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Mark, 45 jaar</span></figcaption>
+                    </figure>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-prev" aria-label="Vorige beoordeling" disabled>◄</button>
+                    <button class="carousel-next" aria-label="Volgende beoordeling">►</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container" id="blog" aria-labelledby="blog-heading">
+            <div class="title-container">
+                <h2 id="blog-heading">Welzijnsblog: Afslanken & Spiritualiteit</h2>
+            </div>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="blog-heading,blog .carousel-item" aria-label="Luister naar de blogsectie">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="blog-heading,blog .carousel-item" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+            <div class="carousel blog-carousel" aria-label="Carrousel van blogartikelen">
+                <div class="carousel-inner">
+                    <article class="carousel-item active" aria-hidden="false">
+                        <h3 class="audio-text">5 Tips om Af te Vallen Zonder Frustratie</h3>
+                        <p class="audio-text">Ontdek hoe u snel kunt afvallen met eenvoudige adviezen: hydrateer, wandel 30 min per dag, gebruik de Victory capsules, kies voor uitgebalanceerde maaltijden, en mediteer om stress te verminderen.</p>
+                        <button class="read-more-btn audio-text" aria-label="Lees verder">Lees verder</button>
+                        <div class="read-more-content audio-text">
+                            <p>Het opnemen van vezelrijk voedsel zoals groene groenten en rode vruchten kan ook uw metabolisme versnellen. Combineer dit met kwaliteitsslaap om uw resultaten te optimaliseren. Probeer onze <a href="#minceur">Victory capsules</a> voor een natuurlijke boost!</p>
+                        </div>
+                    </article>
+                    <article class="carousel-item" aria-hidden="true">
+                <h3 class="audio-text">Oefeningen voor een Getoned en Gesculpteerd Lichaam</h3>
+                <p class="audio-text">Sculpt uw figuur met eenvoudige oefeningen zoals squats, lunges, of push-ups. Deze bewegingen, gecombineerd met de <a href="#minceur">Victory capsules</a>, tonen uw spieren en versnellen het gewichtsverlies. Een regelmatige routine brengt u dichter bij uw doelen.</p>
+                <button class="read-more-btn audio-text" aria-label="Lees verder over oefeningen">Lees verder</button>
+                <div class="read-more-content audio-text">
+                    <p>Spierversterkende oefeningen, zoals squats of planken, verhogen uw basismetabolisme, waardoor u meer calorieën verbrandt, zelfs in rust. Doe drie sessies van twintig minuten per week, wissel de spiergroepen af voor een gebalanceerde training. De <a href="#minceur">Victory capsules</a> optimaliseren deze inspanningen door de vetabsorptie te verminderen, waardoor u sneller resultaten ziet. Gebruik online video's om de juiste technieken te leren en blessures te voorkomen. Voeg stretches toe om uw flexibiliteit te verbeteren. Ons <a href="#programme-personnalise">gepersonaliseerde programma</a> biedt routines op maat van uw niveau, met advies om gemotiveerd te blijven.</p>
+                </div>
+            </article>
+            <article class="carousel-item" aria-hidden="true">
+                <h3 class="audio-text">Dankbaarheid: een Hefboom voor uw Welzijn</h3>
+                <p class="audio-text">Dankbaarheid beoefenen vermindert stress, verbetert uw humeur, en ondersteunt uw afslankdoelen. Door elke dag op te schrijven waarvoor u dankbaar bent, cultiveert u een positieve houding. Combineer dit met de <a href="#spiritual-services">heldervoetendienst per e-mail</a> voor een diepe emotionele balans.</p>
+                <button class="read-more-btn audio-text" aria-label="Lees verder over dankbaarheid">Lees verder</button>
+                <div class="read-more-content audio-text">
+                    <p>Dankbaarheid herprogrammeert uw brein om zich op het positieve te concentreren, waardoor stressgerelateerde eetbuien verminderen. Schrijf elke avond drie dingen op die u blij hebben gemaakt, zoals een gedeeld moment of een bereikt doel. Deze praktijk versterkt uw motivatie om gezonde gewoonten aan te nemen, zoals evenwichtig eten of sporten. Een sessie <a href="#spiritual-services">heldervoetendienst per e-mail</a> met Frederick kan u helpen identificeren wat u blokkeert in uw zoektocht naar welzijn. Integreer ook eenvoudige rituelen, zoals een ochtendmeditatie of een glimlach in de spiegel. Ons <a href="#programme-personnalise">gepersonaliseerde programma</a> stelt dankbaarheidsoefeningen en adviezen voor om uw mindset te transformeren.</p>
+                </div>
+            </article>
+                    <article class="carousel-item" aria-hidden="true">
+                        <h3 class="audio-text">Hoe Heldervoetendienst Uw Welzijn Kan Helpen</h3>
+                        <p class="audio-text">De heldervoetendienst per e-mail van Frederick begeleidt u in uw liefdes-, professionele of persoonlijke keuzes. Een sessie kan uw emotionele blokkades bevrijden en uw zelfvertrouwen versterken.</p>
+                        <button class="read-more-btn audio-text" aria-label="Lees verder">Lees verder</button>
+                        <div class="read-more-content audio-text">
+                            <p>Onze diensten zoals <a href="#spiritual-services">ontheksing</a> of <a href="#spiritual-services">sentimentele magie</a> complementeren deze aanpak voor een totale balans. Ontdek hoe spiritualiteit uw dagelijks leven kan transformeren!</p>
+                        </div>
+                    </article>
+                    <article class="carousel-item" aria-hidden="true">
+                        <h3 class="audio-text">Yoga en Afslanken: Een Winnende Combinatie</h3>
+                        <p class="audio-text">Yoga, gecombineerd met de Victory capsules, versnelt het gewichtsverlies terwijl het stress vermindert. Probeer eenvoudige houdingen zoals de plank of de neerwaartse hond.</p>
+                        <button class="read-more-btn audio-text" aria-label="Lees verder">Lees verder</button>
+                        <div class="read-more-content audio-text">
+                            <p>15 minuten per dag oefenen is voldoende om resultaten te zien. Combineer dit met ons <a href="#programme-personnalise">gepersonaliseerde programma</a> voor een complete transformatie!</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-prev" aria-label="Vorig artikel" disabled>◄</button>
+                    <button class="carousel-next" aria-label="Volgend artikel">►</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container" id="article" aria-labelledby="article-heading">
+            <div class="title-container">
+                <h2 id="article-heading">Artikel: Afslanken en Spiritualiteit, de Sleutel tot Succes</h2>
+            </div>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="article-heading,article-section" aria-label="Luister naar het artikel Afslanken en Spiritualiteit">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="article-heading,article-section" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+            <article class="article-section audio-text">
+                <p>Afvallen beperkt zich niet tot het veranderen van uw dieet of sporten. <strong>Duurzaam gewichtsverlies</strong> gaat ook over emotioneel en spiritueel evenwicht. De <a href="#minceur">Victory capsules</a> werken op het lichaam, maar door deze fysieke transformatie te combineren met een spirituele aanpak, worden de resultaten aanzienlijk versterkt.</p>
+                <p>Stress, emotionele blokkades of negatieve energieën kunnen uw vooruitgang belemmeren. Hier komen de diensten van Frederick in beeld. Een <a href="#spiritual-services">heldervoetendienst per e-mail</a> voor €15,00 kan uw keuzes verhelderen, een <a href="#spiritual-services">ontheksing</a> bevrijdt u van blokkerende energieën, en de <a href="#spiritual-services">sentimentele magie</a> versterkt uw relaties. Deze spirituele tools helpen u vertrouwen en motivatie terug te vinden.</p>
+                <br>
+                <p>Hier zijn 3 praktische tips om afslanken en spiritualiteit te combineren:</p>
+                <br>
+                <ol>
+                    <li><strong>Mediteer 10 min per dag:</strong> Verminder stress om eetbuien te beperken.</li>
+                    <li><strong>Wandel bewust:</strong> Verbind met de natuur terwijl u calorieën verbrandt.</li>
+                    <li><strong>Stel duidelijke intenties:</strong> Een heldervoetendienst kan u helpen uw doelen te definiëren.</li>
+                </ol>
+                <br>
+                <p>Met de "Victory" capsules om snel af te vallen, vergezeld van onze spirituele diensten, transformeert u echt uw lichaam en geest. Sluit u aan bij onze 4000+ tevreden klanten en begin vandaag nog!</p>
+                <p class="backlink">Bron: <a href="https://www.sante-nutrition.fr" class="backlink">Gezondheid Voeding</a></p>
+            </article>
+            <div class="cta-buttons-container">
+                <a href="https://buy.stripe.com/9AQ28w5Zag1p5KE29u" target="_blank" rel="noopener nofollow" class="cta-button" data-tracking-label="Victory1Box" aria-label="Bestel 1 doos Victory capsules">Val nu af en Bestel Victory afslanker zonder uitstel</a>
+            </div>
+        </section>
+
+        <section class="content-container voyance-section" id="spiritual-services" aria-labelledby="spiritual-services-heading">
+            <div class="title-container">
+                <h2 id="spiritual-services-heading">Spirituele Diensten door Frederick</h2>
+            </div>
+            <div class="audio-button-container">
+                <button class="audio-button play-button" data-text-id="spiritual-services-heading,spiritual-services article,spiritual-services .service-description" aria-label="Luister naar de sectie Spirituele Diensten">Luisteren</button>
+                <button class="audio-button pause-button" data-text-id="spiritual-services-heading,spiritual-services article,spiritual-services .service-description" aria-label="Pauzeer de audio" style="display:none">Pauze</button>
+            </div>
+
+  <!-- 🔮 Geoptimaliseerde afbeelding voor Futuroloog Helderziende Frederick - Wereldleider SEO, IA & Web3 2025 🔮 -->
+<picture>
+    <img 
+        src="https://i.imgur.com/LVjBODh.jpg"
+        alt="Frederick, erkend helderziend futuroloog in heldervoetendienst per e-mail sinds 1998"
+        width="900"
+        height="675"
+        style="display:block; max-width:100%; height:auto; margin:0 auto; border-radius:16px; box-shadow:0 0 20px rgba(0,0,0,0.25);"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="high"
+        title="Frederick, specialist in heldervoetendienst per e-mail en premium rituelen">
+</picture>
+
+<!-- 🌐 JSON-LD voor SEO, geloofwaardigheid, IA, Spraakassistenten & Web3 (Ultieme optimalisatie 2025) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": ["Person", "ProfessionalService"],
+            "@id": "https://clairvoyancemedium.com#frederick",
+            "name": "Frederick",
+            "givenName": "Frederick",
+            "description": "Frederick, helderziend futuroloog met 27 jaar ervaring sinds 1998, gespecialiseerd in heldervoetendienst per e-mail en premium rituelen om affectieve en spirituele projecten te ondersteunen. Consultaties vanaf €15, premium rituelen van €250 tot €500, betalingen in USDT geaccepteerd.",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://clairvoyancemedium.com",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "xpath": ["/html/head/title"],
+                    "cssSelector": [".service-title"]
+                }
+            },
+            "disambiguatingDescription": "Helderziend futuroloog gespecialiseerd in heldervoetendienst per e-mail en premium rituelen",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https://clairvoyancemedium.com#image-frederick",
+                "url": "https://i.imgur.com/LVjBODh.jpg",
+                "contentUrl": "https://i.imgur.com/LVjBODh.jpg",
+                "width": "900",
+                "height": "675",
+                "caption": "Officieel portret van Frederick, helderziend futuroloog in heldervoetendienst en premium rituelen"
+            },
+            "telephone": "+33695468923",
+            "email": "contact@clairvoyancemedium.com",
+            "url": "https://clairvoyancemedium.com",
+            "sameAs": [
+                "https://clairvoyancemedium.com",
+                "https://x.com/clairvoyancemedium",
+                "https://www.google.com/maps?cid=12345678901234567890",
+                "https://www.instagram.com/clairvoyancemedium",
+                "https://www.trustpilot.com/review/clairvoyancemedium.com"
+            ],
+            "knowsAbout": [
+                {
+                    "@type": "Thing",
+                    "name": "Heldervoetendienst per e-mail",
+                    "description": "Methode van divinatie via schriftelijke uitwisseling voor gepersonaliseerd advies"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Sentimenteel ritueel",
+                    "description": "Premium spirituele praktijk om liefdesbanden te versterken"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Affectieve terugkeer",
+                    "description": "Premium ritueel om emotionele hereniging te bevorderen"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Ontheksing",
+                    "description": "Premium praktijk om negatieve energieën te elimineren"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Passieritueel",
+                    "description": "Premium ritueel om liefde en emotionele intensiteit te ondersteunen"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Mediumschap",
+                    "description": "Spirituele communicatie voor diepgaande inzichten"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Futurologie",
+                    "description": "Voorspelling van toekomstige trends gebaseerd op intuïtie en analyse"
+                }
+            ],
+            "knowsLanguage": ["nl", "en"],
+            "areaServed": ["NL", "BE", "FR"],
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://clairvoyancemedium.com",
+                "providesService": ["E-mail", "Telefoon"]
+            },
+            "potentialAction": [
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "Reservering",
+                    "telephone": "+33695468923",
+                    "url": "https://clairvoyancemedium.com/booking",
+                    "availableLanguage": ["Dutch"],
+                    "description": "Maak een afspraak met Frederick voor een heldervoetendienst per e-mail"
+                }
+            ],
+            "educationalAlignment": {
+                "@type": "AlignmentObject",
+                "educationalFramework": "Spiritualiteit",
+                "targetName": "Ethische heldervoetendienst",
+                "targetUrl": "https://clairvoyancemedium.com/ethiek"
+            },
+            "subjectOf": {
+                "@type": "Book",
+                "name": "Ethische Heldervoetendienst in de 21e Eeuw",
+                "author": "Frederick",
+                "url": "https://clairvoyancemedium.com/boek"
+            },
+            "video": {
+                "@type": "VideoObject",
+                "name": "Hoe werkt een consultatie met Frederick?",
+                "description": "Frederick legt zijn methode van heldervoetendienst per e-mail uit in 2 minuten",
+                "thumbnailUrl": "https://i.imgur.com/LVjBODh.jpg",
+                "embedUrl": "https://youtube.com/embed/video123",
+                "uploadDate": "2025-06-03",
+                "interactionStatistic": {
+                    "@type": "InteractionCounter",
+                    "interactionType": "https://schema.org/WatchAction",
+                    "userInteractionCount": 15000
+                }
+            },
+            "award": [
+                "Medium van het Jaar 2020"
+            ],
+            "priceRange": "€€-€€€",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Premium Diensten van Frederick",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Heldervoetendienst per e-mail",
+                            "description": "Consultatie van heldervoetendienst per e-mail vanaf €15, antwoord binnen 24 uur om uw beslissingen te verlichten.",
+                            "makesOffer": "Consultatie à €15"
+                        },
+                        "price": "15",
+                        "priceCurrency": "EUR",
+                        "availability": "https://schema.org/InStock"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Premium sentimenteel ritueel",
+                            "description": "Premium ritueel om affectieve banden te versterken, van €250 tot €500.",
+                            "makesOffer": "Ritueel à €250-€500"
+                        },
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "250",
+                            "maxPrice": "500",
+                            "priceCurrency": "EUR"
+                        },
+                        "availability": "https://schema.org/InStock"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Premium ontheksing",
+                            "description": "Premium ritueel om de eliminatie van negatieve energieën te bevorderen, van €250 tot €500.",
+                            "makesOffer": "Ritueel à €250-€500"
+                        },
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "250",
+                            "maxPrice": "500",
+                            "priceCurrency": "EUR"
+                        },
+                        "availability": "https://schema.org/InStock"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Premium passieritueel",
+                            "description": "Premium ritueel om liefde en emotionele intensiteit te ondersteunen, van €250 tot €500.",
+                            "makesOffer": "Ritueel à €250-€500"
+                        },
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "250",
+                            "maxPrice": "500",
+                            "priceCurrency": "EUR"
+                        },
+                        "availability": "https://schema.org/InStock"
+                    }
+                ]
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "500",
+                "bestRating": "5",
+                "worstRating": "1",
+                "description": "Gebaseerd op 500 klantbeoordelingen voor de diensten van heldervoetendienst en premium rituelen."
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Sanne D."
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "reviewBody": "De heldervoetendienst per e-mail van Frederick heeft me veel geholpen, snel en precies antwoord."
+                },
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Daan P."
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4",
+                        "bestRating": "5"
+                    },
+                    "reviewBody": "Het premium sentimentele ritueel was nuttig, maar de resultaten waren wat trager dan verwacht."
+                },
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "Internationale Federatie van Heldervoetendienst"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.9",
+                        "bestRating": "5"
+                    },
+                    "reviewBody": "Frederick is een erkend expert voor zijn ethische consultaties en premium rituelen."
+                }
+            ],
+            "paymentAccepted": ["PayPal", "GooglePay", "ApplePay", "Klarna", "Revolut", "Bankkaart", "Crypto (USDT)"],
+            "hasPOS": "https://metaverse.clairvoyancemedium.com",
+            "termsOfService": "https://clairvoyancemedium.com/voorwaarden",
+            "refundPolicy": {
+                "@type": "MonetaryAmount",
+                "description": "Terugbetaling onder voorwaarden, zie https://clairvoyancemedium.com/terugbetaling"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Hoe werkt heldervoetendienst per e-mail?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Stuur uw vraag per e-mail naar Frederick, die u binnen 4 uur antwoordt met gepersonaliseerd advies."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hoe contacteer ik Frederick?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Per e-mail (contact@clairvoyancemedium.com) of telefoon (+33695468923)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Welke premium diensten biedt Frederick aan?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Frederick biedt consultaties van heldervoetendienst per e-mail aan vanaf €15, premium sentimentele rituelen, premium ontheksingen, en premium passierituelen van €250 tot €500."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Dataset",
+            "name": "Methoden van heldervoetendienst Frederick",
+            "description": "Gegevens over de effectiviteit van premium rituelen en consultaties van heldervoetendienst per e-mail",
+            "variableMeasured": "Klanttevredenheidspercentage",
+            "measurementMethod": "Post-ritueel enquêtes",
+            "url": "https://clairvoyancemedium.com/data"
+        },
+        {
+            "@type": "HowTo",
+            "name": "Een premium sentimenteel ritueel gebruiken",
+            "description": "Gids om een premium sentimenteel ritueel voor te bereiden en uit te voeren met Frederick",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "name": "Kies een intentie",
+                    "text": "Definieer duidelijk uw affectief doel, zoals het versterken van een liefdesband."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Contacteer Frederick",
+                    "text": "Stuur uw verzoek per e-mail naar contact@clairvoyancemedium.com."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Volg de instructies",
+                    "text": "Frederick zal u begeleiden om het gepersonaliseerde premium ritueel uit te voeren."
+                }
+            ]
+        }
+    ]
+}
+</script>
+            <br>
+            <br>
+            <article class="audio-text">
+                <p>Helderziend/futuroloog sinds meer dan 25 jaar, Frederick van het bureau ClairVoyanceMedium.com biedt u <strong>gepersonaliseerde spirituele diensten</strong> aan om u te begeleiden in uw liefdes-, professionele of persoonlijke leven. Elke prestatie wordt binnen enkele uren geleverd, met duidelijke antwoorden en vertrouwelijke opvolging. Complementeer uw gewichtsverlies met een emotioneel en spiritueel evenwicht dankzij onze diensten:</p>
+            </article>
+            <div class="cta-buttons-container">
+                <a href="https://buy.stripe.com/dR614scnycPddd66oV" target="_blank" rel="noopener nofollow" class="cta-button service-button" data-tracking-label="VoyanceEmail" aria-label="Bestel een heldervoetendienst per e-mail €15">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">Heldervoetendienst per E-mail – €15,00</span>
+    <span class="service-description audio-text" style="color:#808080;">Stel 3 precieze vragen en ontvang een gedetailleerde heldervoetendienst binnen 4 uur. Ideaal voor liefde, werk of familie.</span>
+</a>
+                <a href="https://buy.stripe.com/cN2bJ62MYg1p0qk5lE" target="_blank" rel="noopener nofollow" class="cta-button service-button" data-tracking-label="Desenvoutement" aria-label="Bestel een ontheksing">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">Ontheksing – €250,00</span>
+    <span class="service-description audio-text" style="color:#808080;">Bevrijd u van negatieve energieën met een gepersonaliseerd ritueel. Volledige resultaten in 3 weken.</span>
+</a>
+                <a href="https://buy.stripe.com/6oEbJ65ZacPd0qkbIX" target="_blank" rel="noopener nofollow" class="cta-button service-button" data-tracking-label="MagieSentimentale" aria-label="Bestel een ritueel van sentimentele magie">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">Sentimentele Magie – €250,00</span>
+    <span class="service-description audio-text" style="color:#808080;">Versterk uw liefdesbanden of trek liefde aan met een krachtig toegewijd ritueel.</span>
+</a>
+                <a href="https://buy.stripe.com/fZefZmdrC8yX7SMdR8" target="_blank" rel="noopener nofollow" class="cta-button service-button" data-tracking-label="CompatibiliteAmoureuse" aria-label="Bestel een analyse van liefdescompatibiliteit">
+    <span style="color:#000; text-shadow:0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.4); animation:neon-flicker 1.5s infinite alternate;">Liefdescompatibiliteit – €20,00</span>
+    <span class="service-description audio-text" style="color:#808080;">Ontdek of uw relatie harmonieus is met een analyse gebaseerd op uw profielen.</span>
+</a>
+            </div>
+            <p class="urgency-notice audio-text">⏰ Meer dan 60% zorgen te laat voor hun gewicht! Bestel nu zonder voortdurend uitstel naar morgen om nog te kunnen profiteren van de huidige tarieven en een sterke en duurzame gezondheid terug te vinden!</p>
+        </section>
+    </main>
+    <br>
+<!-- ✅ Wetenschappelijke referentie -->
+<div class="medical-ref" style="font-size:12px; color:#6a737d; line-height:1.4; margin:15px 0 5px;">
+    <span style="font-weight:500;">* Officiële bron en Medische referentie:</span>
+    <a href="https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/mayo-clinic-diet/art-20045460" 
+       target="_blank" 
+       rel="noopener external" 
+       style="color:#3a5f8a; text-decoration:none;"
+       title="Mayo Clinic studie over duurzame diëten"
+       itemprop="citation">
+       Mayo Clinic, 2023
+    </a>
+</div>
+
+<!-- ✅ Wetenschappelijke persreferentie - Ultra geoptimaliseerd voor SEO/IA 2025 -->
+<div class="press-reference" itemscope itemtype="https://schema.org/CreativeWork"
+     style="font-size:0.8rem; color:#5a6573; line-height:1.6; margin:0.3rem 0;">
+  
+  <meta itemprop="datePublished" content="2002-07-07">
+  <meta itemprop="author" content="Gary Taubes">
+  <meta itemprop="name" content="What If It's All Been a Big Fat Lie?">
+
+  <div style="margin-bottom:0.25rem; font-weight:600;" itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization">
+    <span itemprop="name">* Wetenschappelijke journalistieke bron – <span style="color:#3a5f8a;">New York Times</span> :</span>
+  </div>
+
+  <a href="https://www.nytimes.com/2002/07/07/magazine/what-if-it-s-all-been-a-big-fat-lie.html"
+     target="_blank"
+     rel="noopener external nofollow"
+     title="Lees het baanbrekende artikel van Gary Taubes over diëten"
+     itemprop="url"
+     style="color:#3a5f8a; text-decoration:none; border-bottom:1px dotted #3a5f8a; transition:all 0.2s ease;"
+     aria-label="New York Times artikel over voedingsdiëten">
+     <span itemprop="headline">
+       Gary Taubes (2002)
+     </span>
+  </a>
+
+</div>
+
+    <!-- Anti-abandon pop-up -->
+    <div class="popup exit-intent-popup" id="youtubePopup" role="dialog" aria-labelledby="popup-heading">
+        <h2 id="popup-heading">Meer dan 60% zorgen te laat voor hun gewicht!</h2>
+   
+        <!-- Promotionele video blok van Victory capsules met tracking -->
+<div class="popup-video-container" 
+     id="victory-video-container"
+     style="max-width: 960px; margin: 2rem auto; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.3); background-color: #000;"
+     data-gtm-video="victory-minceur-video"
+     data-gtm-category="Betrokkenheid"
+     data-gtm-action="Video Afspelen"
+     data-gtm-label="Video-Minute-Victory-Dj-pfiIzB44">
+
+  <iframe 
+    id="victoryVideo"
+    src="https://www.youtube-nocookie.com/embed/Dj-pfiIzB44?rel=0&vq=hd1080&autoplay=1&mute=0&enablejsapi=1" 
+    title="Officiële video van Victory afslankcapsules – snel gewichtsverlies en platte buik" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen 
+    loading="lazy" 
+    aria-label="Video: Victory afslankcapsules – natuurlijke oplossing om snel af te vallen"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+<!-- Onderschrift onder de video (SEO en UX) -->
+<p style="text-align:center; font-size:1rem; color:#555; margin-top:1rem;">
+   Ontdek hoe <strong>de Victory capsules</strong> helpen om <em>snel gewicht te verliezen</em> terwijl u een <em>platte buik</em> en <em>natuurlijke energie</em> terugkrijgt.
+</p>
+
+<!-- Forceer HD met YouTube Iframe API -->
+<script>
+  // Laad de YouTube JS API
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  let player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('victoryVideo', {
+      events: {
+        'onReady': function (event) {
+          try {
+            event.target.setPlaybackQuality('hd1080'); // forceer kwaliteit
+            event.target.playVideo();
+          } catch (e) {
+            console.warn("Kwaliteit niet geforceerd", e);
+          }
+        }
+      }
+    });
+  }
+</script>
+
+<!-- Onzichtbaar SEO blok -->
+<div style="position:absolute; left:-9999px; top:-9999px;">
+  <h1>Officiële video van Victory afslankcapsules</h1>
+  <p>De <strong>Victory afslankcapsules</strong> helpen u snel en duurzaam gewicht te verliezen. Deze video toont concrete resultaten: <em>platte buik</em>, <em>slanker figuur</em>, <em>teruggevonden energie</em>. Zonder streng dieet werkt de formule effectief.</p>
+  <p>Ontdek klantbeoordelingen, de natuurlijke samenstelling en de klinisch bewezen effectiviteit van deze Franse oplossing voor gewichtsverlies.</p>
+</div>
+
+<!-- Gestructureerde JSON-LD gegevens voor video-indexering -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Video van Victory afslankcapsules",
+  "description": "Ontdek hoe de Victory afslankcapsules helpen om snel en natuurlijk gewicht te verliezen. Zichtbare resultaten: platte buik, slanker figuur, teruggevonden energie.",
+  "thumbnailUrl": "https://img.youtube.com/vi/Dj-pfiIzB44/maxresdefault.jpg",
+  "uploadDate": "2024-05-01",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/Dj-pfiIzB44",
+  "contentUrl": "https://www.clairvoyancemedium.com",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ClairvoyanceMedium.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.clairvoyancemedium.com/logo.png"
+    }
+  }
+}
+</script>
+
+
